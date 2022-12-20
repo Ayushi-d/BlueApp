@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Parking-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MyParkingVC" id="Y6W-OH-hqX" customClass="MyParkingVC" customModule="BLUE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbF-nf-jrZ">
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Parking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-jv-iQk">
+                                        <rect key="frame" x="164.5" y="14.5" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-YI-fN8">
+                                        <rect key="frame" x="16" y="13" width="24" height="24"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic_back"/>
+                                        <connections>
+                                            <action selector="btnBackTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OUr-Tf-Jwi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dV-UC-Fr2">
+                                        <rect key="frame" x="368" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WJy-0r-Ham"/>
+                                            <constraint firstAttribute="width" constant="30" id="Yxg-4w-RsK"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic_add"/>
+                                        <connections>
+                                            <action selector="addBoatTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lza-tW-xt4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="11q-Lp-zel"/>
+                                    <constraint firstAttribute="trailing" secondItem="1dV-UC-Fr2" secondAttribute="trailing" constant="16" id="alY-K0-sK1"/>
+                                    <constraint firstItem="oRg-YI-fN8" firstAttribute="leading" secondItem="IbF-nf-jrZ" secondAttribute="leading" constant="16" id="bu5-Yw-J3D"/>
+                                    <constraint firstItem="1dV-UC-Fr2" firstAttribute="centerY" secondItem="IbF-nf-jrZ" secondAttribute="centerY" id="ho1-cv-kSt"/>
+                                    <constraint firstItem="CcO-jv-iQk" firstAttribute="centerY" secondItem="IbF-nf-jrZ" secondAttribute="centerY" id="j95-4b-meW"/>
+                                    <constraint firstItem="oRg-YI-fN8" firstAttribute="centerY" secondItem="IbF-nf-jrZ" secondAttribute="centerY" id="vaN-J9-LHG"/>
+                                    <constraint firstItem="CcO-jv-iQk" firstAttribute="centerX" secondItem="IbF-nf-jrZ" secondAttribute="centerX" id="xj9-Ld-du8"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n2I-c1-6Ak">
+                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="p8t-pA-I3q"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="3ww-F7-1Lt"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFE-hx-77c">
+                                <rect key="frame" x="41.5" y="397.5" width="331" height="101"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Parking Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-Ei-ahy" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="331" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-f3-DDs" customClass="BlueButton" customModule="BLUE" customModuleProvider="target">
+                                        <rect key="frame" x="16.5" y="51" width="298" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add Parking"/>
+                                        <connections>
+                                            <action selector="addParkingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hP1-Um-yr9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4RP-Ei-ahy" secondAttribute="trailing" id="92h-jd-wmU"/>
+                                    <constraint firstItem="MVU-f3-DDs" firstAttribute="centerX" secondItem="uFE-hx-77c" secondAttribute="centerX" id="Jzm-n8-u1i"/>
+                                    <constraint firstItem="MVU-f3-DDs" firstAttribute="width" secondItem="uFE-hx-77c" secondAttribute="width" multiplier="0.9" id="LVn-sP-PoZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="MVU-f3-DDs" secondAttribute="bottom" constant="20" id="RTr-BM-aPK"/>
+                                    <constraint firstItem="4RP-Ei-ahy" firstAttribute="leading" secondItem="uFE-hx-77c" secondAttribute="leading" id="Xsb-RN-67q"/>
+                                    <constraint firstItem="4RP-Ei-ahy" firstAttribute="top" secondItem="uFE-hx-77c" secondAttribute="top" constant="10" id="iBS-yn-0YP"/>
+                                    <constraint firstItem="MVU-f3-DDs" firstAttribute="top" secondItem="4RP-Ei-ahy" secondAttribute="bottom" constant="20" id="uug-IJ-gg1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IbF-nf-jrZ" secondAttribute="trailing" id="0IS-Uf-IHv"/>
+                            <constraint firstItem="IbF-nf-jrZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5AT-zT-u2d"/>
+                            <constraint firstItem="uFE-hx-77c" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="62P-cM-5MW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="n2I-c1-6Ak" secondAttribute="bottom" id="7fV-nI-1V1"/>
+                            <constraint firstItem="n2I-c1-6Ak" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="B7a-Mq-546"/>
+                            <constraint firstItem="uFE-hx-77c" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Kpx-C9-Zre"/>
+                            <constraint firstItem="uFE-hx-77c" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="YLe-2W-7sQ"/>
+                            <constraint firstItem="n2I-c1-6Ak" firstAttribute="top" secondItem="IbF-nf-jrZ" secondAttribute="bottom" id="czg-Mi-uIR"/>
+                            <constraint firstItem="IbF-nf-jrZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fvb-IQ-fbo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="n2I-c1-6Ak" secondAttribute="trailing" id="t8z-M8-tzb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Parking" image="ic_parking" selectedImage="ic_parking" id="FZA-Gs-GLa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bntBack" destination="oRg-YI-fN8" id="mFk-gL-Clk"/>
+                        <outlet property="noParkingLabel" destination="4RP-Ei-ahy" id="ZEr-5m-neT"/>
+                        <outlet property="noParkingView" destination="uFE-hx-77c" id="dNu-Fd-pg9"/>
+                        <outlet property="parkingTableView" destination="n2I-c1-6Ak" id="XZj-eJ-bG7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_add" width="17" height="17"/>
+        <image name="ic_back" width="24" height="24"/>
+        <image name="ic_parking" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

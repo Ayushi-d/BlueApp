@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SeaFarerCell" rowHeight="190" id="KGk-i7-Jjw" customClass="SeaFarerCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbk-Wh-aEQ" customClass="BlueView" customModule="BLUE" customModuleProvider="target">
+                        <rect key="frame" x="20" y="10" width="315" height="170"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salim Alsafi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keK-vP-7zc">
+                                <rect key="frame" x="20.000000000000007" y="10.000000000000002" width="88.666666666666686" height="19.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85r-jU-qh6">
+                                <rect key="frame" x="285" y="8.6666666666666679" width="20" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_chat"/>
+                                <connections>
+                                    <action selector="seaFarerMsgTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1iB-6c-qli"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjP-XN-gRx">
+                                <rect key="frame" x="245" y="8.6666666666666679" width="20" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_call"/>
+                                <connections>
+                                    <action selector="seaFarerCallTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EVO-Ul-duu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-6X-6PF">
+                                <rect key="frame" x="0.0" y="39.666666666666664" width="315" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="s6s-EG-Hma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience : 5 years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTI-1h-yug">
+                                <rect key="frame" x="10" y="50.666666666666664" width="130.66666666666666" height="16.999999999999993"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality : Indian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaE-fa-dGf">
+                                <rect key="frame" x="10.000000000000007" y="75.666666666666671" width="119.66666666666669" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boat Experience : Sailing Yacht, Motor Yacht" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmb-j5-PTp">
+                                <rect key="frame" x="10" y="100.66666666666667" width="286" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Spoken Languages : English , Arabic, Hindi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2N-ji-Hch">
+                                <rect key="frame" x="10" y="125.66666666666664" width="276" height="34.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age : 35 Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4y-P9-cNZ">
+                                <rect key="frame" x="211" y="50.666666666666664" width="94" height="16.999999999999993"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bmb-j5-PTp" firstAttribute="leading" secondItem="NTI-1h-yug" secondAttribute="leading" id="0ND-gL-8Mw"/>
+                            <constraint firstItem="NTI-1h-yug" firstAttribute="leading" secondItem="cbk-Wh-aEQ" secondAttribute="leading" constant="10" id="1sM-gx-oYm"/>
+                            <constraint firstItem="NTI-1h-yug" firstAttribute="top" secondItem="Ssh-6X-6PF" secondAttribute="bottom" constant="10" id="57h-pt-4wz"/>
+                            <constraint firstItem="DjP-XN-gRx" firstAttribute="centerY" secondItem="keK-vP-7zc" secondAttribute="centerY" id="9du-lo-XED"/>
+                            <constraint firstItem="uaE-fa-dGf" firstAttribute="leading" secondItem="NTI-1h-yug" secondAttribute="leading" id="DiZ-Jz-kgx"/>
+                            <constraint firstItem="keK-vP-7zc" firstAttribute="leading" secondItem="cbk-Wh-aEQ" secondAttribute="leading" constant="20" id="E1Z-U8-aqc"/>
+                            <constraint firstItem="t4y-P9-cNZ" firstAttribute="trailing" secondItem="85r-jU-qh6" secondAttribute="trailing" id="E6A-Qd-eZU"/>
+                            <constraint firstItem="85r-jU-qh6" firstAttribute="centerY" secondItem="keK-vP-7zc" secondAttribute="centerY" id="PIO-6o-1iL"/>
+                            <constraint firstItem="X2N-ji-Hch" firstAttribute="top" secondItem="Bmb-j5-PTp" secondAttribute="bottom" constant="8" id="RKL-6X-fC5"/>
+                            <constraint firstAttribute="bottom" secondItem="X2N-ji-Hch" secondAttribute="bottom" constant="10" id="SQ9-f8-QrC"/>
+                            <constraint firstItem="Ssh-6X-6PF" firstAttribute="top" secondItem="keK-vP-7zc" secondAttribute="bottom" constant="10" id="THv-jg-6qS"/>
+                            <constraint firstItem="X2N-ji-Hch" firstAttribute="leading" secondItem="NTI-1h-yug" secondAttribute="leading" id="Tzb-PG-zyM"/>
+                            <constraint firstItem="85r-jU-qh6" firstAttribute="leading" secondItem="DjP-XN-gRx" secondAttribute="trailing" constant="20" id="a4e-Ii-XKq"/>
+                            <constraint firstAttribute="trailing" secondItem="85r-jU-qh6" secondAttribute="trailing" constant="10" id="dDO-rT-TCh"/>
+                            <constraint firstItem="t4y-P9-cNZ" firstAttribute="centerY" secondItem="NTI-1h-yug" secondAttribute="centerY" id="dF3-1r-Vva"/>
+                            <constraint firstAttribute="trailing" secondItem="Ssh-6X-6PF" secondAttribute="trailing" id="eTm-NG-vsc"/>
+                            <constraint firstItem="Bmb-j5-PTp" firstAttribute="top" secondItem="uaE-fa-dGf" secondAttribute="bottom" constant="8" id="hLi-pn-nFt"/>
+                            <constraint firstItem="Ssh-6X-6PF" firstAttribute="leading" secondItem="cbk-Wh-aEQ" secondAttribute="leading" id="u63-ea-6cI"/>
+                            <constraint firstItem="keK-vP-7zc" firstAttribute="top" secondItem="cbk-Wh-aEQ" secondAttribute="top" constant="10" id="uQz-aY-QLV"/>
+                            <constraint firstItem="uaE-fa-dGf" firstAttribute="top" secondItem="NTI-1h-yug" secondAttribute="bottom" constant="8" id="yI4-bQ-W8w"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cbk-Wh-aEQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Yil-Vj-kgA"/>
+                    <constraint firstAttribute="bottom" secondItem="cbk-Wh-aEQ" secondAttribute="bottom" constant="10" id="aly-de-3RV"/>
+                    <constraint firstAttribute="trailing" secondItem="cbk-Wh-aEQ" secondAttribute="trailing" constant="20" id="oDt-27-KEt"/>
+                    <constraint firstItem="cbk-Wh-aEQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zEM-v9-adz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="seaFarerAge" destination="t4y-P9-cNZ" id="QFI-rD-uXC"/>
+                <outlet property="seaFarerBoatExperince" destination="Bmb-j5-PTp" id="tw9-k8-IKV"/>
+                <outlet property="seaFarerExperince" destination="NTI-1h-yug" id="IhR-uQ-Vx9"/>
+                <outlet property="seaFarerMessage" destination="85r-jU-qh6" id="C0H-QY-lFo"/>
+                <outlet property="seaFarerName" destination="keK-vP-7zc" id="JAY-WT-3Zc"/>
+                <outlet property="seaFarerNationality" destination="uaE-fa-dGf" id="jBf-AW-F2j"/>
+                <outlet property="seaFarerPhone" destination="DjP-XN-gRx" id="gl5-XX-hCN"/>
+                <outlet property="seaFarerlanguages" destination="X2N-ji-Hch" id="uFY-AW-Dag"/>
+            </connections>
+            <point key="canvasLocation" x="163.04347826086959" y="148.66071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_call" width="20" height="20"/>
+        <image name="ic_chat" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

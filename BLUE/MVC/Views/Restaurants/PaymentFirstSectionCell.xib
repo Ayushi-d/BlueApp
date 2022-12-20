@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentFirstSectionCell" rowHeight="62" id="KGk-i7-Jjw" customClass="PaymentFirstSectionCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="442" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-x2-6di">
+                        <rect key="frame" x="16" y="10" width="410" height="42"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Pick Up Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qc-gl-ahH" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="202.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marina Mall, Salmiya" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhV-LR-zAb" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="207.5" y="0.0" width="202.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-Kc-rBo">
+                        <rect key="frame" x="0.0" y="61" width="442" height="1"/>
+                        <color key="backgroundColor" name="Lightgray"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="JeI-AN-U0c"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="0dj-Kc-rBo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3Pq-Fl-jlN"/>
+                    <constraint firstAttribute="bottom" secondItem="0dj-Kc-rBo" secondAttribute="bottom" id="NKu-cB-0W9"/>
+                    <constraint firstAttribute="trailing" secondItem="0dj-Kc-rBo" secondAttribute="trailing" id="O65-Gk-dPn"/>
+                    <constraint firstAttribute="bottom" secondItem="QKG-x2-6di" secondAttribute="bottom" constant="10" id="TvB-PQ-0x9"/>
+                    <constraint firstAttribute="trailing" secondItem="QKG-x2-6di" secondAttribute="trailing" constant="16" id="UXW-2e-r58"/>
+                    <constraint firstItem="QKG-x2-6di" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cpx-1S-2DB"/>
+                    <constraint firstItem="QKG-x2-6di" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xLR-N3-Jy5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblPrice" destination="qhV-LR-zAb" id="MB8-U5-AWW"/>
+                <outlet property="lblProduct" destination="6Qc-gl-ahH" id="0xN-tC-TC5"/>
+            </connections>
+            <point key="canvasLocation" x="275.36231884057975" y="48.214285714285715"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Lightgray">
+            <color red="0.50999999046325684" green="0.50999999046325684" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

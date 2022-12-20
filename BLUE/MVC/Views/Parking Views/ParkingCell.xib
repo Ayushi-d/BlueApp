@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="ParkingCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_boat" translatesAutoresizingMaskIntoConstraints="NO" id="v80-ik-GWP">
+                        <rect key="frame" x="20" y="8.5" width="86.5" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="uOy-Nb-VZY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catamaran Boats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHn-U6-yCE">
+                        <rect key="frame" x="118.5" y="16.5" width="130.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking id : 1234569" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydu-GP-KvB">
+                        <rect key="frame" x="118.5" y="49.5" width="143.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuB-AW-hXm">
+                        <rect key="frame" x="118.5" y="86" width="78" height="22.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                        <inset key="imageEdgeInsets" minX="-9" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Booked" image="ic_tick">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.500 KWD " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6b-us-LS4">
+                        <rect key="frame" x="219" y="87.5" width="91" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wHn-U6-yCE" firstAttribute="top" secondItem="v80-ik-GWP" secondAttribute="top" constant="8" id="1ba-z2-dwL"/>
+                    <constraint firstItem="i6b-us-LS4" firstAttribute="centerY" secondItem="tuB-AW-hXm" secondAttribute="centerY" id="1lY-uV-JNf"/>
+                    <constraint firstAttribute="bottom" secondItem="i6b-us-LS4" secondAttribute="bottom" constant="10" id="7aN-dW-hf6"/>
+                    <constraint firstItem="ydu-GP-KvB" firstAttribute="centerY" secondItem="v80-ik-GWP" secondAttribute="centerY" id="9jC-om-J41"/>
+                    <constraint firstItem="v80-ik-GWP" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.27" id="F4d-GJ-2Xb"/>
+                    <constraint firstItem="ydu-GP-KvB" firstAttribute="leading" secondItem="wHn-U6-yCE" secondAttribute="leading" id="IuM-51-dkG"/>
+                    <constraint firstItem="v80-ik-GWP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YeB-Ch-VcS"/>
+                    <constraint firstItem="v80-ik-GWP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="YjQ-ZH-quE"/>
+                    <constraint firstItem="wHn-U6-yCE" firstAttribute="leading" secondItem="v80-ik-GWP" secondAttribute="trailing" constant="12" id="a1z-M5-zfO"/>
+                    <constraint firstItem="tuB-AW-hXm" firstAttribute="leading" secondItem="wHn-U6-yCE" secondAttribute="leading" id="mzH-PA-P8N"/>
+                    <constraint firstItem="tuB-AW-hXm" firstAttribute="bottom" secondItem="v80-ik-GWP" secondAttribute="bottom" id="vge-8L-mov"/>
+                    <constraint firstAttribute="trailing" secondItem="i6b-us-LS4" secondAttribute="trailing" constant="10" id="zkM-eX-3N9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="parkingBoatBookStatus" destination="tuB-AW-hXm" id="rOe-ts-w4r"/>
+                <outlet property="parkingBoatBookingID" destination="ydu-GP-KvB" id="fbG-7m-CfM"/>
+                <outlet property="parkingBoatImage" destination="v80-ik-GWP" id="xNh-ei-4Ns"/>
+                <outlet property="parkingBoatName" destination="wHn-U6-yCE" id="KSA-uX-ssg"/>
+                <outlet property="parkingBoatPrice" destination="i6b-us-LS4" id="MLL-xs-z3s"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="124.21875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_boat" width="80" height="80"/>
+        <image name="ic_tick" width="17" height="11"/>
+    </resources>
+</document>

@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "518D2CDA-B8DF-48AA-9F16-D51A55E82037"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D89FA63F-81CC-4B27-B4AC-664D535DEEDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Auth Controllers/ViewModel/AuthVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "callWSSocialLogin(isSocial:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15732C1A-E2B6-45BC-940A-F50AA7F52ED6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/CommonUtility/SharedManager/SignInWithApple+Manager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "authorizationController(controller:didCompleteWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9454E2AD-AD0E-4CF0-8E78-B4BEB93A7CEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/CommonUtility/SharedManager/SignInWithApple+Manager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "authorizationController(controller:didCompleteWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "058B6A16-37BC-4170-BB66-50149967FBE0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Auth Controllers/ViewModel/AuthVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "callWSSocialLogin(isSocial:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "058B6A16-37BC-4170-BB66-50149967FBE0 - f18f29b37e3494ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BLUE.AuthVM.callWSSocialLogin(isSocial: Swift.Bool, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Auth%20Controllers/ViewModel/AuthVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
+                  offsetFromSymbolStart = "1152">
+               </Location>
+               <Location
+                  uuid = "058B6A16-37BC-4170-BB66-50149967FBE0 - 313b1e341908cf18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyJSON.JSON&gt;) -&gt; () in BLUE.AuthVM.callWSSocialLogin(isSocial: Swift.Bool, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Auth%20Controllers/ViewModel/AuthVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "235B0704-9F40-4A33-AA31-B74754CE078A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Auth Controllers/ViewModel/AuthVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "callWSSocialLogin(isSocial:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "109C2040-B4C2-4304-9BAA-513116688473"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Home Controllers/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "addReview(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "109C2040-B4C2-4304-9BAA-513116688473 - 9035a8452bf07b43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyJSON.JSON&gt;) -&gt; () in BLUE.HomeViewModel.addReview(_: Swift.Bool, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "265">
+               </Location>
+               <Location
+                  uuid = "109C2040-B4C2-4304-9BAA-513116688473 - 9035a8452bf07b43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyJSON.JSON&gt;) -&gt; () in BLUE.HomeViewModel.addReview(_: Swift.Bool, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "478">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E648E986-00A5-4248-93C8-2371846EA574"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Home Controllers/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "addReview(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4B9402E-DE10-4B98-B60C-7FAF17DB2451"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Home Controllers/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "addReview(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E4B9402E-DE10-4B98-B60C-7FAF17DB2451 - 9035a8452bf0789c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyJSON.JSON&gt;) -&gt; () in BLUE.HomeViewModel.addReview(_: Swift.Bool, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "E4B9402E-DE10-4B98-B60C-7FAF17DB2451 - 9035a8452bf0789c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyJSON.JSON&gt;) -&gt; () in BLUE.HomeViewModel.addReview(_: Swift.Bool, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "247">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51428FD7-F5B9-43ED-928A-16936CB0EC47"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Home Controllers/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "addReview(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "51428FD7-F5B9-43ED-928A-16936CB0EC47 - 77fcf3ce26d20017"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BLUE.HomeViewModel.addReview(_: Swift.Bool, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "1113">
+               </Location>
+               <Location
+                  uuid = "51428FD7-F5B9-43ED-928A-16936CB0EC47 - 9035a8452bf078bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyJSON.JSON&gt;) -&gt; () in BLUE.HomeViewModel.addReview(_: Swift.Bool, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "162">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F177FE34-1372-489F-9A8B-F1A4EB9D1B02"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Home Controllers/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "rating(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC81967B-42C2-4F24-8D9D-94CE00CF3CEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Home Controllers/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "rating(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC81967B-42C2-4F24-8D9D-94CE00CF3CEB - 889465339f73140a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BLUE.HomeViewModel.rating(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "839">
+               </Location>
+               <Location
+                  uuid = "CC81967B-42C2-4F24-8D9D-94CE00CF3CEB - 889465339f73140a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BLUE.HomeViewModel.rating(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "977">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8510CC89-77B1-4BCE-A3CD-366F9CEAEC3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Home Controllers/ViewModel/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "rating(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8510CC89-77B1-4BCE-A3CD-366F9CEAEC3A - 889465339f7315a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BLUE.HomeViewModel.rating(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "1101">
+               </Location>
+               <Location
+                  uuid = "8510CC89-77B1-4BCE-A3CD-366F9CEAEC3A - f7e34bcc4566adfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyJSON.JSON&gt;) -&gt; () in BLUE.HomeViewModel.rating(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "BLUE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/meander/Downloads/BLUE/BLUE/MVC/Controllers/Home%20Controllers/ViewModel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "172"
+                  endingLineNumber = "172"
+                  offsetFromSymbolStart = "133">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0ACFC6B-2E6C-4BC5-8068-69EDC301CDF2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Booking Controllers/Controller/MyBookingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E32B261D-DD30-44B9-9C25-ED07ACCE2F43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLUE/MVC/Controllers/Booking Controllers/Controller/MyBookingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

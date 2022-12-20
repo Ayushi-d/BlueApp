@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="DestinationCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgn-fY-cyO" customClass="BlueView" customModule="BLUE" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="10" width="320" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08H-ye-ROA">
+                                <rect key="frame" x="10" y="10" width="309" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogj-Ey-bOg">
+                                <rect key="frame" x="14" y="40" width="94" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Kyl-Bd-1Wg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Min 4 Hrs" image="ic_clock">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.000 KWD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKK-oe-Gpc">
+                                <rect key="frame" x="187" y="38.5" width="123" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="08H-ye-ROA" firstAttribute="top" secondItem="mgn-fY-cyO" secondAttribute="top" constant="10" id="HvA-SH-1Uv"/>
+                            <constraint firstAttribute="bottom" secondItem="ogj-Ey-bOg" secondAttribute="bottom" constant="10" id="LBE-JH-I3s"/>
+                            <constraint firstAttribute="trailing" secondItem="08H-ye-ROA" secondAttribute="trailing" constant="1" id="WFw-VN-a0V"/>
+                            <constraint firstItem="ogj-Ey-bOg" firstAttribute="leading" secondItem="08H-ye-ROA" secondAttribute="leading" constant="4" id="dFR-5a-oQF"/>
+                            <constraint firstItem="ogj-Ey-bOg" firstAttribute="top" secondItem="08H-ye-ROA" secondAttribute="bottom" constant="4" id="vx3-og-p7F"/>
+                            <constraint firstItem="sKK-oe-Gpc" firstAttribute="centerY" secondItem="ogj-Ey-bOg" secondAttribute="centerY" id="wuq-4N-FsB"/>
+                            <constraint firstItem="08H-ye-ROA" firstAttribute="leading" secondItem="mgn-fY-cyO" secondAttribute="leading" constant="10" id="xYb-wL-01N"/>
+                            <constraint firstAttribute="trailing" secondItem="sKK-oe-Gpc" secondAttribute="trailing" constant="10" id="zUA-Te-zvg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mgn-fY-cyO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="An4-dc-59e"/>
+                    <constraint firstItem="mgn-fY-cyO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HQ4-xy-Y4c"/>
+                    <constraint firstAttribute="trailing" secondItem="mgn-fY-cyO" secondAttribute="trailing" id="oFY-3B-COE"/>
+                    <constraint firstAttribute="bottom" secondItem="mgn-fY-cyO" secondAttribute="bottom" constant="10" id="oY3-sz-XlG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bntTime" destination="ogj-Ey-bOg" id="mxX-05-dSp"/>
+                <outlet property="lblPrice" destination="sKK-oe-Gpc" id="vDP-lN-DBI"/>
+                <outlet property="lblTitle" destination="08H-ye-ROA" id="cCF-0Z-pYK"/>
+                <outlet property="viewBlue" destination="mgn-fY-cyO" id="983-RY-ESZ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="115.17857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_clock" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

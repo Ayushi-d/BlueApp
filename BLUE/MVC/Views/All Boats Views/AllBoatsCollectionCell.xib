@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllBoatsCollectionCell" id="kgA-se-HCW" customClass="AllBoatsCollectionCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jKu-iX-Yr3">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_boat" translatesAutoresizingMaskIntoConstraints="NO" id="wfy-gK-q7B">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caterman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8V-Pa-dgk">
+                        <rect key="frame" x="0.0" y="103" width="120" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="o8V-Pa-dgk" firstAttribute="leading" secondItem="jKu-iX-Yr3" secondAttribute="leading" id="2qL-5z-JKs"/>
+                    <constraint firstAttribute="bottom" secondItem="o8V-Pa-dgk" secondAttribute="bottom" id="8je-Qd-KqJ"/>
+                    <constraint firstAttribute="trailing" secondItem="wfy-gK-q7B" secondAttribute="trailing" id="HL2-hm-8ra"/>
+                    <constraint firstItem="wfy-gK-q7B" firstAttribute="top" secondItem="jKu-iX-Yr3" secondAttribute="top" id="d47-z6-Iiy"/>
+                    <constraint firstAttribute="trailing" secondItem="o8V-Pa-dgk" secondAttribute="trailing" id="dLF-Et-1PR"/>
+                    <constraint firstAttribute="bottom" secondItem="wfy-gK-q7B" secondAttribute="bottom" constant="20" id="mbo-MU-YRu"/>
+                    <constraint firstItem="wfy-gK-q7B" firstAttribute="leading" secondItem="jKu-iX-Yr3" secondAttribute="leading" id="yob-kz-5dz"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="120" height="120"/>
+            <connections>
+                <outlet property="boatImage" destination="wfy-gK-q7B" id="ffE-JF-fB8"/>
+                <outlet property="boatLabel" destination="o8V-Pa-dgk" id="ZJh-na-lYd"/>
+            </connections>
+            <point key="canvasLocation" x="182.60869565217394" y="94.419642857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_boat" width="80" height="80"/>
+    </resources>
+</document>

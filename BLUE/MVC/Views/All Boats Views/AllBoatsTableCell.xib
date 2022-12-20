@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllBoatsTableCell" rowHeight="122" id="KGk-i7-Jjw" customClass="AllBoatsTableCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="122"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_boat" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-3e-X2k">
+                        <rect key="frame" x="0.0" y="11" width="85" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="Zd3-HW-8ex"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catamaran Boats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgH-zQ-NvH">
+                        <rect key="frame" x="97" y="11" width="232" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar8-xD-Sdj">
+                        <rect key="frame" x="107" y="40.5" width="131" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Al Jahra, Kuwait" image="ic_location_black">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-cf-u8Y">
+                        <rect key="frame" x="97" y="67" width="193" height="19"/>
+                        <string key="text">Starting from 100.000 KWD
+</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cy-O9-9c9">
+                        <rect key="frame" x="279" y="90" width="50" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Parked">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="parkedButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NXf-LQ-pZ8"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5k-pI-jef">
+                        <rect key="frame" x="168" y="90" width="91" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="View on Map">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="mapButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ozQ-Ln-Pol"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-Lu-73S">
+                        <rect key="frame" x="292" y="65.5" width="45" height="22"/>
+                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="4.9" image="ic_rating">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="PgH-zQ-NvH" secondAttribute="trailing" constant="10" id="1qC-9f-tLD"/>
+                    <constraint firstItem="e2L-cf-u8Y" firstAttribute="top" secondItem="Ar8-xD-Sdj" secondAttribute="bottom" constant="6" id="2sP-EG-kWq"/>
+                    <constraint firstAttribute="bottom" secondItem="9cy-O9-9c9" secondAttribute="bottom" constant="2" id="2y8-SX-nEY"/>
+                    <constraint firstItem="Ar8-xD-Sdj" firstAttribute="leading" secondItem="PgH-zQ-NvH" secondAttribute="leading" constant="10" id="54j-VF-WmU"/>
+                    <constraint firstItem="PgH-zQ-NvH" firstAttribute="top" secondItem="bbK-3e-X2k" secondAttribute="top" id="8Xt-TS-Otx"/>
+                    <constraint firstItem="PgH-zQ-NvH" firstAttribute="leading" secondItem="bbK-3e-X2k" secondAttribute="trailing" constant="12" id="9jH-JA-v2B"/>
+                    <constraint firstItem="u5k-pI-jef" firstAttribute="centerY" secondItem="9cy-O9-9c9" secondAttribute="centerY" id="9zU-rU-xx9"/>
+                    <constraint firstItem="e2L-cf-u8Y" firstAttribute="leading" secondItem="PgH-zQ-NvH" secondAttribute="leading" id="CWA-Yd-cVf"/>
+                    <constraint firstItem="Ar8-xD-Sdj" firstAttribute="top" secondItem="PgH-zQ-NvH" secondAttribute="bottom" constant="10" id="Cub-Wh-ptO"/>
+                    <constraint firstItem="u5k-pI-jef" firstAttribute="top" secondItem="e2L-cf-u8Y" secondAttribute="bottom" constant="4" id="GPP-UH-BTq"/>
+                    <constraint firstAttribute="trailing" secondItem="9cy-O9-9c9" secondAttribute="trailing" constant="10" id="HqI-PK-2J7"/>
+                    <constraint firstItem="bbK-3e-X2k" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.25" id="JtA-bE-MMB"/>
+                    <constraint firstItem="bbK-3e-X2k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PIS-AM-mIe"/>
+                    <constraint firstItem="bbK-3e-X2k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RGV-b5-Ki1"/>
+                    <constraint firstItem="Ep6-Lu-73S" firstAttribute="centerY" secondItem="e2L-cf-u8Y" secondAttribute="centerY" id="aGh-ci-Unk"/>
+                    <constraint firstItem="9cy-O9-9c9" firstAttribute="leading" secondItem="u5k-pI-jef" secondAttribute="trailing" constant="20" id="asd-ly-3Z4"/>
+                    <constraint firstAttribute="bottom" secondItem="u5k-pI-jef" secondAttribute="bottom" constant="2" id="eLG-BY-AaP"/>
+                    <constraint firstItem="Ep6-Lu-73S" firstAttribute="leading" secondItem="e2L-cf-u8Y" secondAttribute="trailing" constant="2" id="tG0-6S-w9t"/>
+                    <constraint firstItem="9cy-O9-9c9" firstAttribute="top" secondItem="e2L-cf-u8Y" secondAttribute="bottom" constant="4" id="tNq-Lo-WLb"/>
+                    <constraint firstAttribute="trailing" secondItem="Ep6-Lu-73S" secondAttribute="trailing" constant="2" id="vQW-Lx-wNp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="boatLocation" destination="Ar8-xD-Sdj" id="UNC-Lo-M7e"/>
+                <outlet property="boatName" destination="PgH-zQ-NvH" id="rRB-oE-hE2"/>
+                <outlet property="boatimage" destination="bbK-3e-X2k" id="0I8-Fc-YGX"/>
+                <outlet property="boatprice" destination="e2L-cf-u8Y" id="8yF-xb-TlK"/>
+                <outlet property="mapButton" destination="u5k-pI-jef" id="hL8-Fo-2MV"/>
+                <outlet property="parkedButton" destination="9cy-O9-9c9" id="eXR-37-3qF"/>
+                <outlet property="ratingLabel" destination="Ep6-Lu-73S" id="2tf-sK-bG5"/>
+            </connections>
+            <point key="canvasLocation" x="151.44927536231884" y="125.89285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_boat" width="80" height="80"/>
+        <image name="ic_location_black" width="15" height="19"/>
+        <image name="ic_rating" width="19" height="19"/>
+    </resources>
+</document>

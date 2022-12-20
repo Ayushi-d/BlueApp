@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccessoriesHeaderViewCell" rowHeight="134" id="KGk-i7-Jjw" customClass="AccessoriesHeaderViewCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="134"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v1A-rP-xmc">
+                        <rect key="frame" x="16" y="27" width="300" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0O-6A-dXk" customClass="BlueView" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHu-vj-wYB" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="67.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_vest" translatesAutoresizingMaskIntoConstraints="NO" id="Rb5-6c-vut">
+                                        <rect key="frame" x="24" y="13.5" width="20" height="23"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uHu-vj-wYB" secondAttribute="bottom" constant="10" id="EPa-uV-iUi"/>
+                                    <constraint firstItem="Rb5-6c-vut" firstAttribute="centerY" secondItem="n0O-6A-dXk" secondAttribute="centerY" constant="-15" id="H0l-br-9WH"/>
+                                    <constraint firstItem="uHu-vj-wYB" firstAttribute="leading" secondItem="n0O-6A-dXk" secondAttribute="leading" id="aF9-Ke-8mc"/>
+                                    <constraint firstItem="Rb5-6c-vut" firstAttribute="centerX" secondItem="n0O-6A-dXk" secondAttribute="centerX" id="jCn-AQ-QIV"/>
+                                    <constraint firstAttribute="trailing" secondItem="uHu-vj-wYB" secondAttribute="trailing" id="spf-Uo-9lI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAm-f5-Jvc" customClass="BlueView" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="77.5" y="0.0" width="67.5" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goggles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuG-K8-wad" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="67.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_goggles" translatesAutoresizingMaskIntoConstraints="NO" id="8sD-x2-UAF">
+                                        <rect key="frame" x="5" y="10.5" width="58" height="29"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8sD-x2-UAF" firstAttribute="centerY" secondItem="SAm-f5-Jvc" secondAttribute="centerY" constant="-15" id="2TW-6a-koP"/>
+                                    <constraint firstAttribute="trailing" secondItem="tuG-K8-wad" secondAttribute="trailing" id="G4U-9o-90F"/>
+                                    <constraint firstAttribute="bottom" secondItem="tuG-K8-wad" secondAttribute="bottom" constant="10" id="W92-Zk-qyd"/>
+                                    <constraint firstItem="8sD-x2-UAF" firstAttribute="centerX" secondItem="SAm-f5-Jvc" secondAttribute="centerX" id="c0O-Lz-cIE"/>
+                                    <constraint firstItem="tuG-K8-wad" firstAttribute="leading" secondItem="SAm-f5-Jvc" secondAttribute="leading" id="hqJ-lL-gPx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vE-gP-uw9" customClass="BlueView" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="155" y="0.0" width="67.5" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrT-0B-In6" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="49.5" width="57.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cap" translatesAutoresizingMaskIntoConstraints="NO" id="9fW-Vo-vHo">
+                                        <rect key="frame" x="14" y="8.5" width="40" height="27"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9fW-Vo-vHo" firstAttribute="centerY" secondItem="2vE-gP-uw9" secondAttribute="centerY" constant="-18" id="5vK-d9-DX9"/>
+                                    <constraint firstAttribute="trailing" secondItem="XrT-0B-In6" secondAttribute="trailing" constant="5" id="7MC-bq-cZa"/>
+                                    <constraint firstItem="XrT-0B-In6" firstAttribute="leading" secondItem="2vE-gP-uw9" secondAttribute="leading" constant="5" id="ef0-Ij-kNt"/>
+                                    <constraint firstAttribute="bottom" secondItem="XrT-0B-In6" secondAttribute="bottom" constant="10" id="fyU-ro-Ks0"/>
+                                    <constraint firstItem="9fW-Vo-vHo" firstAttribute="centerX" secondItem="2vE-gP-uw9" secondAttribute="centerX" id="o3d-GR-hf8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCn-d2-JBF" customClass="BlueView" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="232.5" y="0.0" width="67.5" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wetsuits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3f-yq-fqd" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="67.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Wetsuits" translatesAutoresizingMaskIntoConstraints="NO" id="Y4a-4y-957">
+                                        <rect key="frame" x="25.5" y="8" width="17" height="34"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="T3f-yq-fqd" secondAttribute="bottom" constant="10" id="5Wc-rc-C2S"/>
+                                    <constraint firstItem="Y4a-4y-957" firstAttribute="centerY" secondItem="oCn-d2-JBF" secondAttribute="centerY" constant="-15" id="eak-26-765"/>
+                                    <constraint firstItem="Y4a-4y-957" firstAttribute="centerX" secondItem="oCn-d2-JBF" secondAttribute="centerX" id="ozZ-AP-ZTy"/>
+                                    <constraint firstItem="T3f-yq-fqd" firstAttribute="leading" secondItem="oCn-d2-JBF" secondAttribute="leading" id="sWB-zE-0Yp"/>
+                                    <constraint firstAttribute="trailing" secondItem="T3f-yq-fqd" secondAttribute="trailing" id="wfz-JW-BB3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="c2Y-50-SAc"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v1A-rP-xmc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iUW-Rg-hQP"/>
+                    <constraint firstItem="v1A-rP-xmc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qQR-qM-0oL"/>
+                    <constraint firstAttribute="trailing" secondItem="v1A-rP-xmc" secondAttribute="trailing" constant="16" id="y57-b7-j0I"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="viewVest" destination="n0O-6A-dXk" id="apH-yl-x5u"/>
+            </connections>
+            <point key="canvasLocation" x="128.98550724637681" y="158.70535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_Wetsuits" width="17" height="34"/>
+        <image name="ic_cap" width="40" height="27"/>
+        <image name="ic_goggles" width="58" height="29"/>
+        <image name="ic_vest" width="20" height="23"/>
+        <namedColor name="ButtonColor">
+            <color red="0.0" green="0.80784313725490198" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

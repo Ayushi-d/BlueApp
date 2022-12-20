@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RestaurantDetailsCell" rowHeight="116" id="KGk-i7-Jjw" customClass="RestaurantDetailsCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="516" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="516" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_booking" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-03-75b">
+                        <rect key="frame" x="16" y="10" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Yyo-xg-TXS"/>
+                            <constraint firstAttribute="height" constant="100" id="qjm-R9-wTN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2rt-ei-VAt">
+                        <rect key="frame" x="132" y="10" width="368" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlv-ON-Mfg" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="368" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3s-lL-R0b" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="25.5" width="368" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Lightgray"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMP-uf-xTg" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="79.5" width="368" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NKi-03-75b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="89K-de-Ayg"/>
+                    <constraint firstItem="2rt-ei-VAt" firstAttribute="leading" secondItem="NKi-03-75b" secondAttribute="trailing" constant="16" id="gOS-JA-BbK"/>
+                    <constraint firstAttribute="trailing" secondItem="2rt-ei-VAt" secondAttribute="trailing" constant="16" id="kk2-ek-hCk"/>
+                    <constraint firstItem="2rt-ei-VAt" firstAttribute="bottom" secondItem="NKi-03-75b" secondAttribute="bottom" id="mKq-MN-GeC"/>
+                    <constraint firstItem="NKi-03-75b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mqB-LM-x9A"/>
+                    <constraint firstItem="2rt-ei-VAt" firstAttribute="top" secondItem="NKi-03-75b" secondAttribute="top" id="nIJ-dc-YEX"/>
+                    <constraint firstAttribute="bottom" secondItem="NKi-03-75b" secondAttribute="bottom" constant="10" id="v1J-kB-i3Q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img" destination="NKi-03-75b" id="E1H-DZ-FfP"/>
+                <outlet property="lblDescription" destination="U3s-lL-R0b" id="D5X-Iu-nhV"/>
+                <outlet property="lblPrice" destination="VMP-uf-xTg" id="XVD-KG-JQC"/>
+                <outlet property="lblTitle" destination="wlv-ON-Mfg" id="wsv-dG-Gok"/>
+            </connections>
+            <point key="canvasLocation" x="279.71014492753625" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_booking" width="800" height="800"/>
+        <namedColor name="Lightgray">
+            <color red="0.50999999046325684" green="0.50999999046325684" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

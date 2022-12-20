@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyBookingCell" rowHeight="142" id="sMP-Zm-gBI" customClass="MyBookingCell" customModule="BLUE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="528" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sMP-Zm-gBI" id="MCL-wL-0JF">
+                <rect key="frame" x="0.0" y="0.0" width="528" height="142"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_boat" translatesAutoresizingMaskIntoConstraints="NO" id="eF5-sy-Wng">
+                        <rect key="frame" x="16" y="21" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="0ux-9O-E7n"/>
+                            <constraint firstAttribute="width" constant="100" id="aOo-Ge-wCz"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-X8-frt">
+                        <rect key="frame" x="132" y="25" width="380" height="92"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUU-Vd-sSI" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-PZ-9mY" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="25.5" width="380" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpv-UW-6aA">
+                                <rect key="frame" x="0.0" y="62" width="380" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e2j-Sx-nWq">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="20"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_donebooking" translatesAutoresizingMaskIntoConstraints="NO" id="k31-DQ-pej">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="4QO-qg-lo2"/>
+                                                    <constraint firstAttribute="height" constant="20" id="EjN-Wv-eYO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booked" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adp-NN-4RI" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="0.0" width="58" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay6-Q0-cZR" customClass="AppBaseLabel" customModule="BLUE" customModuleProvider="target">
+                                        <rect key="frame" x="338.5" y="0.0" width="41.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelFontType">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ay6-Q0-cZR" secondAttribute="trailing" id="1us-73-ewM"/>
+                                    <constraint firstAttribute="height" constant="30" id="4qS-8l-WGe"/>
+                                    <constraint firstItem="ay6-Q0-cZR" firstAttribute="top" secondItem="Qpv-UW-6aA" secondAttribute="top" id="C2F-Ja-eOh"/>
+                                    <constraint firstItem="e2j-Sx-nWq" firstAttribute="leading" secondItem="Qpv-UW-6aA" secondAttribute="leading" id="Qac-zT-Fk0"/>
+                                    <constraint firstItem="e2j-Sx-nWq" firstAttribute="top" secondItem="Qpv-UW-6aA" secondAttribute="top" id="cfB-Il-5hG"/>
+                                    <constraint firstAttribute="bottom" secondItem="ay6-Q0-cZR" secondAttribute="bottom" id="hW1-Zb-jy1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="RPJ-X8-frt" secondAttribute="trailing" constant="16" id="Dbw-7z-xHy"/>
+                    <constraint firstItem="RPJ-X8-frt" firstAttribute="leading" secondItem="eF5-sy-Wng" secondAttribute="trailing" constant="16" id="JSe-gK-0Xf"/>
+                    <constraint firstAttribute="bottom" secondItem="RPJ-X8-frt" secondAttribute="bottom" constant="25" id="Lxj-TC-4Od"/>
+                    <constraint firstItem="eF5-sy-Wng" firstAttribute="leading" secondItem="MCL-wL-0JF" secondAttribute="leading" constant="16" id="R9I-x6-qGS"/>
+                    <constraint firstItem="eF5-sy-Wng" firstAttribute="centerY" secondItem="MCL-wL-0JF" secondAttribute="centerY" id="bS1-gl-YsO"/>
+                    <constraint firstItem="RPJ-X8-frt" firstAttribute="top" secondItem="MCL-wL-0JF" secondAttribute="top" constant="25" id="s9i-3U-9y8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="FwB-qY-mUu"/>
+            <connections>
+                <outlet property="boatImage" destination="eF5-sy-Wng" id="gBd-jy-Smk"/>
+                <outlet property="bookWidth" destination="4QO-qg-lo2" id="Bud-tE-dH0"/>
+                <outlet property="bookedImage" destination="k31-DQ-pej" id="I3K-8G-x3N"/>
+                <outlet property="bookedlabel" destination="Adp-NN-4RI" id="iQk-y4-pJe"/>
+                <outlet property="lblBookingID" destination="YXy-PZ-9mY" id="Jft-J2-ZZe"/>
+                <outlet property="lblPrice" destination="ay6-Q0-cZR" id="Hu2-aQ-yra"/>
+                <outlet property="lblTitle" destination="YUU-Vd-sSI" id="GbM-J8-d2m"/>
+            </connections>
+            <point key="canvasLocation" x="288.40579710144931" y="160.71428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_boat" width="80" height="80"/>
+        <image name="ic_donebooking" width="17" height="11"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
