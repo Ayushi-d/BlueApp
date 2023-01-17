@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,34 +24,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1m5-d7-Wo7">
-                                <rect key="frame" x="0.0" y="48" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-Kt-45q">
-                                        <rect key="frame" x="10" y="3" width="24" height="24"/>
+                                        <rect key="frame" x="10" y="13" width="24" height="24"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_back"/>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-R3-tFG">
-                                        <rect key="frame" x="387" y="4" width="17" height="22"/>
+                                        <rect key="frame" x="387" y="14" width="17" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_add"/>
                                         <connections>
                                             <action selector="plus_tapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fKs-ff-Xye"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SeaFarer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJB-r7-yYP">
+                                        <rect key="frame" x="173" y="14.5" width="68" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="zQD-R3-tFG" firstAttribute="centerY" secondItem="1m5-d7-Wo7" secondAttribute="centerY" id="3ON-Oq-Aoo"/>
                                     <constraint firstItem="ZCb-Kt-45q" firstAttribute="centerY" secondItem="1m5-d7-Wo7" secondAttribute="centerY" id="IPP-0C-0xX"/>
                                     <constraint firstAttribute="trailing" secondItem="zQD-R3-tFG" secondAttribute="trailing" constant="10" id="QNE-4c-KIo"/>
+                                    <constraint firstItem="kJB-r7-yYP" firstAttribute="centerY" secondItem="1m5-d7-Wo7" secondAttribute="centerY" id="W5g-Cp-dGh"/>
                                     <constraint firstItem="ZCb-Kt-45q" firstAttribute="leading" secondItem="1m5-d7-Wo7" secondAttribute="leading" constant="10" id="dOy-Ux-jjU"/>
-                                    <constraint firstAttribute="height" constant="30" id="rLA-Hk-Zhx"/>
+                                    <constraint firstAttribute="height" constant="50" id="rLA-Hk-Zhx"/>
+                                    <constraint firstItem="kJB-r7-yYP" firstAttribute="centerX" secondItem="1m5-d7-Wo7" secondAttribute="centerX" id="uXr-Vy-Pg0"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-Ur-Dyr">
-                                <rect key="frame" x="16" y="78" width="382" height="735"/>
+                                <rect key="frame" x="16" y="98" width="382" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="eEG-Nt-Bv3" customClass="TabsView" customModule="BLUE" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
@@ -749,6 +757,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Apply"/>
+                                                <connections>
+                                                    <action selector="applyTapped:" destination="oHZ-Dd-arl" eventType="touchUpInside" id="ghW-il-hxW"/>
+                                                </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S4R-RS-Skf">
                                                 <rect key="frame" x="16" y="416" width="382" height="110"/>
@@ -823,10 +834,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="couponField" destination="Uqf-N6-MN3" id="EYk-UY-Dwi"/>
                         <outlet property="tblMethodHeightConstant" destination="zGB-xX-I4m" id="Jnd-k2-f8X"/>
                         <outlet property="tblPaymentMethod" destination="S4R-RS-Skf" id="EDy-1T-KTn"/>
                         <outlet property="tblSummarHeightConstant" destination="UsJ-wW-Rlw" id="eIC-3a-EN2"/>
                         <outlet property="tblSummary" destination="q4D-Xm-grV" id="UMG-aB-D0q"/>
+                        <outlet property="total_amount" destination="Ibr-eB-NNn" id="Oie-A0-sbw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fY-OO-D4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

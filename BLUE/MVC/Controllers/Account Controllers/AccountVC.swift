@@ -21,7 +21,7 @@ class AccountVC: UIViewController, accountDelegate {
     
     let urlDataProvider = URLDataProvider()
     var notificationStatus: Bool?
-    let accountArray = [AccountModel.init(accountLabel: "My Bookings", accountImage: UIImage.init(named: "ic_calander")),AccountModel.init(accountLabel: "My Boats", accountImage: UIImage.init(named: "ic_boatIcon")),AccountModel.init(accountLabel: "My Parking", accountImage: UIImage.init(named: "ic_boatIcon")),AccountModel.init(accountLabel: "Terms & Condition", accountImage: UIImage.init(named: "ic_terms&Conditions")),AccountModel.init(accountLabel: "Contact Us", accountImage: UIImage.init(named: "ic_call")),AccountModel.init(accountLabel: "Refund Policy", accountImage: UIImage.init(named: "ic_refund")),AccountModel.init(accountLabel: "Push Notification", accountImage: UIImage.init(named: "ic_notificationBlue")),AccountModel.init(accountLabel: "Edit Profile", accountImage: UIImage.init(named: "ic_editProfile")),AccountModel.init(accountLabel: "Change Password", accountImage: UIImage.init(named: "ic_lock")),AccountModel.init(accountLabel: "Logout", accountImage: UIImage.init(named: "ic_logout"))]
+    let accountArray = [AccountModel.init(accountLabel: "Edit Profile", accountImage: UIImage.init(named: "ic_editProfile")),AccountModel.init(accountLabel: "My Bookings", accountImage: UIImage.init(named: "ic_calander")),AccountModel.init(accountLabel: "Terms & Condition", accountImage: UIImage.init(named: "ic_terms&Conditions")),AccountModel.init(accountLabel: "Contact Us", accountImage: UIImage.init(named: "ic_call")),AccountModel.init(accountLabel: "Refund Policy", accountImage: UIImage.init(named: "ic_refund")),AccountModel.init(accountLabel: "Push Notification", accountImage: UIImage.init(named: "ic_notificationBlue")),AccountModel.init(accountLabel: "Change Password", accountImage: UIImage.init(named: "ic_lock")),AccountModel.init(accountLabel: "Logout", accountImage: UIImage.init(named: "ic_logout"))]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +89,7 @@ extension AccountVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = accountTableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath) as? AccountCell else {return UITableViewCell() }
         switch indexPath.row{
-        case 6:
+        case 5:
             cell.delegate = self
             cell.accountImage.image = accountArray[indexPath.row].accountImage
             cell.accountLabel.text = accountArray[indexPath.row].accountLabel
@@ -114,11 +114,9 @@ extension AccountVC: UITableViewDelegate, UITableViewDataSource{
         switch accountArray[indexPath.row].accountLabel{
         case "My Bookings":
             self.pushToMyBookingVC(from: "myBooking")
-        case "My Boats":
-            //self.pushToMyBookingVC(from: "myBoats")
-            self.pushVC(controller: AddBoatsVC.instantiate())
         case "Push Notification":
-            self.pushVC(controller: NotificationVC.instantiate())
+            break
+            //self.pushVC(controller: NotificationVC.instantiate())
         case "My Parking":
             let parking = MyParkingVC.instantiate()
             parking.isFromSetting = true

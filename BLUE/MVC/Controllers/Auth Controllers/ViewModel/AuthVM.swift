@@ -147,7 +147,9 @@ class AuthVM {
                     AlertMesage.show(.success, message:message )
                 }
                 // Handle success reponse.
-                completion()
+                if aResponse?["success"].bool == true{
+                    completion()
+                }
             }
         }
     }
@@ -161,14 +163,8 @@ class AuthVM {
         param[API.Key.phone_no] = phone_no
         param[API.Key.email] = email
         param[API.Key.civil_id] = civil_id
-        var service :  Service?
-        if isSocial{
-             service = Service.userUpdateSocail(param: param)
-        }else{
-             service = Service.userUpdate(param: param)
-        }
-        guard let networkService = service else {return}
-        Network.request(networkService) { (aResponse) in
+        let service =  isSocial ? Service.userUpdateSocail(param: param) : Service.userUpdate(param: param)
+        Network.request(service) { (aResponse) in
             if (aResponse?[API.Response.data].dictionary) != nil {
                 // ✅ Success Data is received from the server.
                 if let message = aResponse?[API.Response.message].string {

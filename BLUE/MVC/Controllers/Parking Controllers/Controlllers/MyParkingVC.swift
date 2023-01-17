@@ -43,7 +43,7 @@ class MyParkingVC: UIViewController, StoryboardSceneBased {
     }
     
     @IBAction func addBoatTapped(_ sender: Any) {
-        let vc = AddBoatsVC.instantiate()
+        let vc = AddBoatDetailsVC.instantiate()
         self.pushVC(controller: vc)
     }
     
@@ -62,7 +62,7 @@ class MyParkingVC: UIViewController, StoryboardSceneBased {
     }
 
     @IBAction func addParkingButton(_ sender: Any) {
-        let vc = AddBoatsVC.instantiate()
+        let vc = AddBoatDetailsVC.instantiate()
         self.pushVC(controller: vc)
     }
     
@@ -76,12 +76,18 @@ extension MyParkingVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = parkingTableView.dequeueReusableCell(withIdentifier: "ParkingCell", for: indexPath) as? ParkingCell else {return UITableViewCell() }
         cell.configureCell(with: objParkingData[indexPath.row])
-        
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ParkingDetailsVC.instantiate()
+        vc.objParkingData = objParkingData[indexPath.row]
+        self.pushVC(controller: vc)
     }
     
     

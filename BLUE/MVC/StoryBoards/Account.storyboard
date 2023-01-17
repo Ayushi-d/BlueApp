@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -372,8 +372,8 @@
                                     <constraint firstAttribute="height" constant="50" id="yVL-RA-Xsm"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e1-6z-FJ6">
-                                <rect key="frame" x="20" y="118" width="122" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Password *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e1-6z-FJ6">
+                                <rect key="frame" x="20" y="118" width="133" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -384,8 +384,16 @@
                                     <constraint firstAttribute="height" constant="34" id="qec-MP-Zgj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INo-pO-pPV">
+                                <rect key="frame" x="374" y="146" width="20" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_eye_icon"/>
+                                <connections>
+                                    <action selector="currentEyeTapped:" destination="cIc-Oc-VdU" eventType="touchUpInside" id="Yur-MG-Nv6"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-0w-v5w">
                                 <rect key="frame" x="20" y="178" width="384" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -396,8 +404,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzF-FV-iS2">
-                                <rect key="frame" x="20" y="203" width="101" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzF-FV-iS2">
+                                <rect key="frame" x="20" y="203" width="112" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -408,8 +416,16 @@
                                     <constraint firstAttribute="height" constant="34" id="xBN-YP-h60"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVq-6j-dxs">
+                                <rect key="frame" x="374" y="231" width="20" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_eye_icon"/>
+                                <connections>
+                                    <action selector="newEyeTapped:" destination="cIc-Oc-VdU" eventType="touchUpInside" id="sZ3-lb-kUr"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVo-oH-RQ9">
                                 <rect key="frame" x="20" y="263" width="384" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -428,8 +444,8 @@
                                     <action selector="submitBtnTapped:" destination="cIc-Oc-VdU" eventType="touchUpInside" id="5oG-QE-GGz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPo-yM-4Im">
-                                <rect key="frame" x="20" y="284" width="125" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPo-yM-4Im">
+                                <rect key="frame" x="20" y="284" width="136" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -450,23 +466,35 @@
                                     <constraint firstAttribute="height" constant="34" id="yO5-ty-uBB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFr-c3-AlF">
+                                <rect key="frame" x="374" y="314" width="20" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_eye_icon"/>
+                                <connections>
+                                    <action selector="cnfrmEyetapped:" destination="cIc-Oc-VdU" eventType="touchUpInside" id="2Rk-O4-LXg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T1I-8Z-Sqn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="INo-pO-pPV" firstAttribute="centerY" secondItem="K3r-KS-sD1" secondAttribute="centerY" id="1tM-b5-0tp"/>
                             <constraint firstItem="4hD-8H-z7U" firstAttribute="leading" secondItem="iCY-ag-MS1" secondAttribute="leading" id="1vK-lb-zOg"/>
                             <constraint firstItem="mIl-H8-G4t" firstAttribute="trailing" secondItem="sgL-0N-PUY" secondAttribute="trailing" id="53F-Q3-EtI"/>
                             <constraint firstItem="sgL-0N-PUY" firstAttribute="leading" secondItem="K3r-KS-sD1" secondAttribute="leading" id="89k-kd-Q8M"/>
                             <constraint firstItem="gVo-oH-RQ9" firstAttribute="leading" secondItem="sgL-0N-PUY" secondAttribute="leading" id="AD5-ky-vln"/>
                             <constraint firstItem="xzF-FV-iS2" firstAttribute="top" secondItem="GRg-0w-v5w" secondAttribute="bottom" constant="24" id="AM3-T9-vuL"/>
                             <constraint firstItem="Q0R-Ju-0mQ" firstAttribute="width" secondItem="iCY-ag-MS1" secondAttribute="width" multiplier="0.7" id="AYO-tj-HcH"/>
+                            <constraint firstItem="T1I-8Z-Sqn" firstAttribute="trailing" secondItem="INo-pO-pPV" secondAttribute="trailing" constant="20" id="Dmt-sa-i9O"/>
                             <constraint firstItem="mIl-H8-G4t" firstAttribute="top" secondItem="SPo-yM-4Im" secondAttribute="bottom" constant="6" id="Fru-ib-N8L"/>
                             <constraint firstItem="0e1-6z-FJ6" firstAttribute="top" secondItem="4hD-8H-z7U" secondAttribute="bottom" constant="20" id="JWT-sh-KNx"/>
                             <constraint firstItem="GRg-0w-v5w" firstAttribute="trailing" secondItem="K3r-KS-sD1" secondAttribute="trailing" id="NID-00-tfD"/>
                             <constraint firstItem="GRg-0w-v5w" firstAttribute="top" secondItem="K3r-KS-sD1" secondAttribute="bottom" constant="4" id="Q7i-R2-tgw"/>
+                            <constraint firstItem="T1I-8Z-Sqn" firstAttribute="trailing" secondItem="QVq-6j-dxs" secondAttribute="trailing" constant="20" id="QNg-WK-7NC"/>
                             <constraint firstItem="T1I-8Z-Sqn" firstAttribute="trailing" secondItem="K3r-KS-sD1" secondAttribute="trailing" constant="10" id="QoW-Ps-h20"/>
+                            <constraint firstItem="T1I-8Z-Sqn" firstAttribute="trailing" secondItem="VFr-c3-AlF" secondAttribute="trailing" constant="20" id="Ric-JB-A0W"/>
                             <constraint firstItem="GRg-0w-v5w" firstAttribute="leading" secondItem="K3r-KS-sD1" secondAttribute="leading" id="ZX7-LY-Z3R"/>
                             <constraint firstItem="mIl-H8-G4t" firstAttribute="leading" secondItem="sgL-0N-PUY" secondAttribute="leading" id="aHY-dT-jiI"/>
                             <constraint firstItem="4hD-8H-z7U" firstAttribute="top" secondItem="T1I-8Z-Sqn" secondAttribute="top" id="bLM-xK-Qql"/>
@@ -474,10 +502,12 @@
                             <constraint firstItem="Q0R-Ju-0mQ" firstAttribute="centerX" secondItem="iCY-ag-MS1" secondAttribute="centerX" id="bnG-zF-W7e"/>
                             <constraint firstItem="gVo-oH-RQ9" firstAttribute="trailing" secondItem="sgL-0N-PUY" secondAttribute="trailing" id="cVf-ZB-JT2"/>
                             <constraint firstItem="gVo-oH-RQ9" firstAttribute="top" secondItem="sgL-0N-PUY" secondAttribute="bottom" constant="4" id="ccN-vI-yPa"/>
+                            <constraint firstItem="VFr-c3-AlF" firstAttribute="centerY" secondItem="mIl-H8-G4t" secondAttribute="centerY" id="d1c-Js-jwq"/>
                             <constraint firstItem="K3r-KS-sD1" firstAttribute="top" secondItem="0e1-6z-FJ6" secondAttribute="bottom" constant="4" id="ff1-ZL-Ox2"/>
                             <constraint firstItem="B63-l1-3hd" firstAttribute="leading" secondItem="mIl-H8-G4t" secondAttribute="leading" id="g5f-yj-LM9"/>
                             <constraint firstItem="xzF-FV-iS2" firstAttribute="leading" secondItem="0e1-6z-FJ6" secondAttribute="leading" id="h6j-Yz-g2o"/>
                             <constraint firstItem="sgL-0N-PUY" firstAttribute="top" secondItem="xzF-FV-iS2" secondAttribute="bottom" constant="4" id="ijA-Rl-Kyr"/>
+                            <constraint firstItem="QVq-6j-dxs" firstAttribute="centerY" secondItem="sgL-0N-PUY" secondAttribute="centerY" id="kH4-i8-HYj"/>
                             <constraint firstItem="sgL-0N-PUY" firstAttribute="trailing" secondItem="K3r-KS-sD1" secondAttribute="trailing" id="kzz-SL-Lfc"/>
                             <constraint firstItem="K3r-KS-sD1" firstAttribute="leading" secondItem="0e1-6z-FJ6" secondAttribute="leading" id="o4a-ib-VGQ"/>
                             <constraint firstItem="SPo-yM-4Im" firstAttribute="top" secondItem="gVo-oH-RQ9" secondAttribute="bottom" constant="20" id="ogX-kg-xdz"/>
@@ -489,8 +519,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cnfrmEyeIcon" destination="VFr-c3-AlF" id="tTG-pd-Udn"/>
                         <outlet property="confrmPassField" destination="mIl-H8-G4t" id="gCZ-tm-eXv"/>
+                        <outlet property="currentEyeIcon" destination="INo-pO-pPV" id="l1f-9z-PvT"/>
                         <outlet property="currentPassField" destination="K3r-KS-sD1" id="qXm-LP-tfy"/>
+                        <outlet property="newEyeIcon" destination="QVq-6j-dxs" id="pE5-KT-EM4"/>
                         <outlet property="newPassField" destination="sgL-0N-PUY" id="6TT-DF-yd0"/>
                     </connections>
                 </viewController>
@@ -894,6 +927,7 @@
     <resources>
         <image name="ic_Account" width="18" height="20"/>
         <image name="ic_back" width="24" height="24"/>
+        <image name="ic_eye_icon" width="20" height="14"/>
         <image name="ic_facebook" width="49" height="49"/>
         <image name="ic_instagram" width="49" height="49"/>
         <image name="ic_snapchat" width="49" height="49"/>

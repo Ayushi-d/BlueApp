@@ -31,6 +31,11 @@ class PaymentFirstSectionCell: UITableViewCell,  NibReusable {
         lblProduct.text = object.name
         lblPrice.text = (object.price ?? "0.0") +  " KWD"
     }
+    
+    func cellConfigSeafarer(with object: SeafarerData){
+        lblProduct.text = object.name
+        lblPrice.text = (object.amount ?? "0.0") + " KWD"
+    }
 
     
 }

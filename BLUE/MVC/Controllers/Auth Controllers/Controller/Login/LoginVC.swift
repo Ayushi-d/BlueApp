@@ -2,7 +2,6 @@
 //  LoginVC.swift
 //  BLUE
 //
-//  Created by Agyapal Dhiman on 22/09/22.
 //
 
 import UIKit
@@ -16,6 +15,7 @@ class LoginVC: UIViewController, StoryboardSceneBased {
     /// Storyboard  variable
     static let sceneStoryboard = UIStoryboard(name: StoryboardName.main.rawValue, bundle: nil)
 
+    @IBOutlet weak var signUpLabel: UIButton!
     @IBOutlet weak var viewEmail: UIView!
     @IBOutlet weak var viewPassword: UIView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -39,6 +39,8 @@ class LoginVC: UIViewController, StoryboardSceneBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.delegate = self
+        let subString = CommonUtility.addBoldTextToString(0, lineHeight: 5, underline: 0, textColor: UIColor.black, fullString: "Don't have an account? Sign up", boldPartOfString: "Sign up", boldPartOfString2: "", font: UIFont.systemFont(ofSize: 16), boldFont: UIFont.boldSystemFont(ofSize: 16), boldFontColor: UIColor.black)
+        self.signUpLabel.setAttributedTitle(subString, for: .normal)
     }
     
     @IBAction func eyeButton_tapped(_ sender: UIButton) {
@@ -93,7 +95,7 @@ class LoginVC: UIViewController, StoryboardSceneBased {
     }
     
     func navigateToAddBoat(){
-        let vc =  AddBoatsVC.instantiate()
+        let vc =  AddBoatDetailsVC.instantiate()
         self.pushVC(controller: vc)
     }
     
@@ -151,7 +153,7 @@ extension LoginVC {
                 UDManager.isUserLogin = false
                 return
             }
-            self.pushVC(controller: AddBoatsVC.instantiate())
+            self.pushVC(controller: AddBoatDetailsVC.instantiate())
         }
     }
     
@@ -184,6 +186,7 @@ extension LoginVC {
             }
         }
     }
+    
     
    
     

@@ -28,6 +28,9 @@ public class BoatDetailsData {
     static let createdAt = "created_at"
     static let subCategory = "sub_category"
     static let boatRating = "boat_rating"
+    static let lat = "latitude"
+    static let long = "longitude"
+
 
   }
 
@@ -48,6 +51,8 @@ public class BoatDetailsData {
   public var createdAt: String?
   public var subCategory: Int?
   public var boatRating: String?
+  public var lat: String?
+  public var long: String?
 
 
   // MARK: SwiftyJSON Initializers
@@ -79,6 +84,9 @@ public class BoatDetailsData {
     createdAt = json[SerializationKeys.createdAt].string
     boatRating = json[SerializationKeys.boatRating].string
     subCategory = json[SerializationKeys.subCategory].int
+    lat = json[SerializationKeys.lat].string
+    long = json[SerializationKeys.long].string
+
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -102,6 +110,9 @@ public class BoatDetailsData {
     if let value = createdAt { dictionary[SerializationKeys.createdAt] = value }
     if let value = boatRating { dictionary[SerializationKeys.boatRating] = value }
     if let value = subCategory { dictionary[SerializationKeys.subCategory] = value }
+    if let value = lat { dictionary[SerializationKeys.lat] = value }
+    if let value = long { dictionary[SerializationKeys.long] = value }
+
     return dictionary
   }
 

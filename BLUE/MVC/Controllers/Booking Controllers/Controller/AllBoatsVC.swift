@@ -16,6 +16,7 @@ class AllBoatsVC: UIViewController, StoryboardSceneBased, AllBoatsDelegate {
     let urlDataProvider = URLDataProvider()
     var avaialableArray = [AvailableParking]()
     var ownerBoatID = Int()
+    var boatInfo : BoatInfoModel?
 
     @IBOutlet weak var locationLabel: UIButton!
     @IBOutlet weak var boatsCollectionView: UICollectionView!{
@@ -63,6 +64,7 @@ class AllBoatsVC: UIViewController, StoryboardSceneBased, AllBoatsDelegate {
         vc.isFrom = "Maps"
         vc.availableParking = avaialableArray[tag]
         vc.ownerBoatID = self.ownerBoatID
+        vc.boatInfo = self.boatInfo
         self.pushVC(controller: vc)
     }
     
@@ -70,6 +72,7 @@ class AllBoatsVC: UIViewController, StoryboardSceneBased, AllBoatsDelegate {
         let vc = LocationVC.instantiate()
         vc.availableParking = avaialableArray[tag]
         vc.ownerBoatID = self.ownerBoatID
+        vc.boatInfo = self.boatInfo
         self.pushVC(controller: vc)
     }
 }
@@ -100,6 +103,7 @@ extension AllBoatsVC : UITableViewDelegate, UITableViewDataSource{
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC
             vc.availableParking = avaialableArray[indexPath.row]
             vc.ownerBoatID = self.ownerBoatID
+            vc.boatInfo = self.boatInfo
             self.navigationController?.isHeroEnabled = true
             self.navigationController?.heroNavigationAnimationType = .zoom
             self.navigationController?.pushViewController(vc, animated: true)

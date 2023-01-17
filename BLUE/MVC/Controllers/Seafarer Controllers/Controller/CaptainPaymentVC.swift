@@ -14,15 +14,23 @@ class CaptainPaymentVC: UIViewController , StoryboardSceneBased {
 
     
     /// Storyboard  variable
+    @IBOutlet weak var total_amount: AppBaseLabel!
     @IBOutlet weak var tblMethodHeightConstant: NSLayoutConstraint!
     @IBOutlet weak var tblPaymentMethod: UITableView!
     @IBOutlet weak var tblSummary: UITableView!
     @IBOutlet weak var tblSummarHeightConstant: NSLayoutConstraint!
-    let paymentImages = [UIImage.init(named: "ic_mastercard"),UIImage.init(named: "ic_visa"),UIImage.init(named: "ic_visa")]
+    @IBOutlet weak var couponField: UITextField!
+    let paymentImages = [UIImage.init(named: "ic_mastercard"),UIImage.init(named: "ic_visa")]
     var arrSummary = [SummaryModel]()
     var selectedIndex : Int?
+    var couponData: CouponModel?
+    var grandTotal = 0.0
 
-    
+    var seafarerData : SeafarerData?
+    let urlProvider = URLDataProvider()
+    var completionblock: ((Bool?) -> Void)?
+    var isCouponApplied = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureOnViewDidLoad()
@@ -37,18 +45,59 @@ class CaptainPaymentVC: UIViewController , StoryboardSceneBased {
         tblSummary.estimatedRowHeight = 62
         tblSummary.rowHeight = UITableView.automaticDimension
         tblSummary.reloadData()
+        self.total_amount.text = (self.seafarerData?.amount ?? "0.0") + " KWD"
+        self.grandTotal = (Double(self.seafarerData?.amount ?? "0.0") ?? 0.0)
+
     }
     // MARK: IB Actions
     @IBAction func btnPayConfimrTapped(_ sender: Any) {
-        confirmPayment()
+        bookingSeafarer()
     }
 
-    /// close account popup
-     func confirmPayment() {
-         UIAlertController.showAlert(controller: self, title: Localizable.CaptainPayment.alert, message: Localizable.CaptainPayment.messsgae, style: .alert, cancelButton: Localizable.Buttons.no, distrutiveButton: Localizable.Buttons.yes, otherButtons: nil) { (_, btnStr) in
-            if btnStr == Localizable.Buttons.yes {
-                self.pushVC(controller: BottomBarController.instantiate())
-                
+    @IBAction func applyTapped(_ sender: Any) {
+        if couponField.text != ""{
+            if !isCouponApplied{
+                couponAPI()
+            }else{
+                AlertMesage.show(.warning, message: "Coupon Already Applied")
+            }
+        }else{
+            AlertMesage.show(.error, message: "Enter Coupon code")
+        }
+    }
+    
+    func bookingSeafarer(){
+        let requestBody = ["seafarer_id": "\(self.seafarerData?.id ?? 0)","amount":self.seafarerData?.amount ?? "0.00","coupon_id":"\(self.couponData?.coupon_id ?? 0)","grand_total":"\(self.grandTotal)"]
+        urlProvider.hitAPI(requestUrl: URL(string: "https://blue.testingjunction.tech/api/seafarer-booking")!, httpMethod: .post, requestBody: requestBody.percentEncoded()) { result, statusCode, isSuccess, error in
+            print(result)
+            DispatchQueue.main.async {
+                if isSuccess{
+                    DispatchQueue.main.async {
+                        self.completionblock?(true)
+                        self.poptoViewController()
+                    }
+                }else{
+                    AlertMesage.show(.error, message: "Error")
+                }
+            }
+        }
+    }
+    
+    func couponAPI(){
+        let requestBody: [String: Any] = ["code":couponField.text!,"amount":self.seafarerData?.amount ?? "0.0"]
+        urlProvider.hitAPI(requestUrl: URL(string: "https://blue.testingjunction.tech/api/validate-coupon")!, httpMethod: .post, requestBody: requestBody.percentEncoded(), resultType: BaseResponse<CouponModel>.self) { result, statusCode, isSuccess, error in
+            if isSuccess{
+                DispatchQueue.main.async {
+                    AlertMesage.show(.success, message: "Coupon Code Applied")
+                    self.isCouponApplied = true
+                    self.couponData = result?.data
+                    self.total_amount.text = "\(self.grandTotal - (Double(result?.data?.discount_amount ?? "0.0")?.rounded() ?? 0.0))" + " KWD"
+                    self.grandTotal = self.grandTotal - (Double(result?.data?.discount_amount ?? "0.0")?.rounded() ?? 0.0)
+                }
+            }else{
+                DispatchQueue.main.async {
+                    AlertMesage.show(.error, message: "Invalid Coupon Code")
+                }
             }
         }
     }
@@ -60,18 +109,19 @@ extension CaptainPaymentVC :UITableViewDelegate, UITableViewDataSource {
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == tblSummary {
-            return arrSummary.count
+            return 1
         }else if tableView == tblPaymentMethod {
             return paymentImages.count
         }
         return 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         if tableView == tblSummary {
-             let aCell: PaymentFirstSectionCell = tableView.dequeueReusableCell(for: indexPath)
-             //aCell.cellConfig(with: arrSummary[indexPath.row])
-             return aCell
-         } else if tableView == tblPaymentMethod {
+        if tableView == tblSummary {
+            let aCell: PaymentFirstSectionCell = tableView.dequeueReusableCell(for: indexPath)
+            guard let seafarerData else {return UITableViewCell()}
+            aCell.cellConfigSeafarer(with: seafarerData)
+            return aCell
+        } else if tableView == tblPaymentMethod {
              let aCell: PaymentCell = tableView.dequeueReusableCell(for: indexPath)
              aCell.radioImage.image = indexPath.row == selectedIndex ?? 0 ? UIImage.init(named: "ic_selectedRadio") : UIImage.init(named: "ic_unselectedRadio")
              aCell.paymentImage.image = paymentImages[indexPath.row]

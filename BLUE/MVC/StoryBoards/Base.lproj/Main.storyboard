@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdM-dF-Z32">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdM-dF-Z32">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -330,6 +330,7 @@ been Missed</string>
                         <outlet property="eyeButton" destination="psJ-At-84M" id="HHp-St-WgI"/>
                         <outlet property="googleView" destination="LRU-Ip-9UX" id="PRc-Md-AXT"/>
                         <outlet property="passwordTextField" destination="yON-vS-hfQ" id="ziS-7D-tYO"/>
+                        <outlet property="signUpLabel" destination="eAT-xa-cQQ" id="E4k-Lh-bHD"/>
                         <outlet property="viewEmail" destination="rAE-0o-UcN" id="xTi-qV-23M"/>
                         <outlet property="viewPassword" destination="w8H-kb-8EX" id="N8K-20-KAs"/>
                     </connections>
@@ -721,6 +722,7 @@ been Missed</string>
                         <outlet property="lastnameTextField" destination="cNy-bu-Inp" id="1GZ-1T-Jw4"/>
                         <outlet property="passwordTextField" destination="7eC-NX-Wdu" id="2Hz-tV-usM"/>
                         <outlet property="phoneNoTextField" destination="br9-0D-VCs" id="fyl-Rk-ynj"/>
+                        <outlet property="signInLabel" destination="Zko-dD-Ehc" id="x75-hg-n5N"/>
                         <outlet property="viewcivilIDTextField" destination="JMb-1N-bqD" id="fjb-Y3-cef"/>
                         <outlet property="viewconfrmPasswordTextField" destination="Z3M-5S-F2J" id="fPR-1c-4Ls"/>
                         <outlet property="viewemailTextField" destination="sSL-z2-QhX" id="hj2-Fs-TqR"/>

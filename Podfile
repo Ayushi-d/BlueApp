@@ -39,5 +39,6 @@ target 'BLUE' do
      pod 'Lightbox', '2.5.0'
      
      pod 'OTPFieldView'
+     pod 'CryptoSwift', '~> 1.6.0'
 
 end

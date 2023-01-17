@@ -14,11 +14,15 @@ public class Facilities {
   private struct SerializationKeys {
     static let id = "id"
     static let name = "name"
+    static let image = "image"
+
   }
 
   // MARK: Properties
   public var id: String?
   public var name: String?
+  public var image: String?
+
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -35,6 +39,7 @@ public class Facilities {
   public required init(json: JSON) {
     id = json[SerializationKeys.id].string
     name = json[SerializationKeys.name].string
+    image = json[SerializationKeys.image].string
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -44,6 +49,7 @@ public class Facilities {
     var dictionary: [String: Any] = [:]
     if let value = id { dictionary[SerializationKeys.id] = value }
     if let value = name { dictionary[SerializationKeys.name] = value }
+    if let value = image { dictionary[SerializationKeys.image] = value }
     return dictionary
   }
 

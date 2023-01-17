@@ -20,6 +20,8 @@ class ContactUsVC: UIViewController, StoryboardSceneBased {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reviewField.delegate = self
+        reviewField.textColor = .lightGray
         reviewField.layer.borderColor = UIColor.lightGray.cgColor
         reviewField.layer.borderWidth = 1.0
         reviewField.layer.cornerRadius = 10
@@ -35,10 +37,12 @@ class ContactUsVC: UIViewController, StoryboardSceneBased {
     func contactAPI(){
         let requestBody: [String: Any] = ["name":nameField.text!,"answer":reviewField.text!, "email":emailField.text!]
         urlProvider.hitAPI(requestUrl: URL(string: "https://blue.testingjunction.tech/api/contact-us")!, httpMethod: RequestMethod.post, requestBody: requestBody.percentEncoded()) { result, statusCode, isSuccess, error in
-            if isSuccess{
-                AlertMesage.show(.success, message: result["message"] as? String ?? "Success")
-            }else{
-                AlertMesage.show(.error, message: result["message"] as? String ?? "error")
+            DispatchQueue.main.async {
+                if isSuccess{
+                    AlertMesage.show(.success, message: result["message"] as? String ?? "Success")
+                }else{
+                    AlertMesage.show(.error, message: result["message"] as? String ?? "error")
+                }
             }
         }
     }
@@ -71,4 +75,31 @@ extension ContactUsVC{
         
         return true
     }
+}
+
+extension ContactUsVC: UITextViewDelegate{
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let text = (textView.text! as NSString).replacingCharacters(in: range, with: text)
+        if !text.trimmingCharacters(in: .whitespacesAndNewlines).isBlank {
+            //self.sendAttachment_button.isEnabled = false
+            self.reviewField.textColor = .black
+            return true
+        }
+        return true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if self.reviewField.textColor == .lightGray{
+            self.reviewField.text = ""
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isBlank{
+            self.reviewField.textColor = .lightGray
+            self.reviewField.text = "Your Review"
+        }
+    }
+    
 }

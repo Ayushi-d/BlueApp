@@ -38,6 +38,7 @@
 		6C0BF8CA293741E8002D5B75 /* BoatBookTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0BF8C9293741E8002D5B75 /* BoatBookTimeModel.swift */; };
 		6C0BF8CC29376C4C002D5B75 /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0BF8CB29376C4C002D5B75 /* CouponModel.swift */; };
 		6C0BF8CE29379CCE002D5B75 /* BodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0BF8CD29379CCE002D5B75 /* BodyModel.swift */; };
+		6C262ABE295DA36C00CF77FB /* ParkingDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C262ABD295DA36C00CF77FB /* ParkingDetailsVC.swift */; };
 		6C27AA0829430D75003A79F7 /* Device+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C27AA0729430D75003A79F7 /* Device+Extension.swift */; };
 		6C27AA0A294314EC003A79F7 /* AVAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C27AA09294314EC003A79F7 /* AVAsset+Extension.swift */; };
 		6C2D422128E41C5100BDA3ED /* AddCaptainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D422028E41C5100BDA3ED /* AddCaptainVC.swift */; };
@@ -49,6 +50,10 @@
 		6C40C733294CD64A0051CEF5 /* ForgotPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C40C732294CD6490051CEF5 /* ForgotPassVC.swift */; };
 		6C40C736294D729D0051CEF5 /* OTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C40C735294D729D0051CEF5 /* OTPVC.swift */; };
 		6C40C738294D98370051CEF5 /* NewPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C40C737294D98370051CEF5 /* NewPassVC.swift */; };
+		6C4D980F2975B71D0006635D /* HesabeCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4D980B2975B71C0006635D /* HesabeCrypt.swift */; };
+		6C4D98102975B71D0006635D /* HesabeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4D980C2975B71C0006635D /* HesabeModels.swift */; };
+		6C4D98112975B71D0006635D /* ConstantsPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4D980D2975B71D0006635D /* ConstantsPayment.swift */; };
+		6C4D98122975B71D0006635D /* HesabeGatewayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4D980E2975B71D0006635D /* HesabeGatewayVC.swift */; };
 		6C575B8C28E0843D0061E2E8 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C575B8A28E0843D0061E2E8 /* PaymentCell.swift */; };
 		6C575B8D28E0843D0061E2E8 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C575B8B28E0843D0061E2E8 /* PaymentCell.xib */; };
 		6C575B8F28E089250061E2E8 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C575B8E28E089250061E2E8 /* PaymentVC.swift */; };
@@ -103,6 +108,9 @@
 		6CE8986B28E37103003E1417 /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE8986A28E37103003E1417 /* ContactUsVC.swift */; };
 		6CE8986E28E37119003E1417 /* ChangePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE8986D28E37119003E1417 /* ChangePassVC.swift */; };
 		6CE8987028E37125003E1417 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE8986F28E37125003E1417 /* EditProfileVC.swift */; };
+		6CFB8CBF2959B3AF00D7ADB8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB8CBE2959B3AF00D7ADB8 /* UIView+Extensions.swift */; };
+		6CFB8CC12959B4DA00D7ADB8 /* TSBlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB8CC02959B4DA00D7ADB8 /* TSBlurEffectView.swift */; };
+		6CFB8CC7295C665300D7ADB8 /* BoatInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB8CC6295C665300D7ADB8 /* BoatInfoModel.swift */; };
 		7601CD842927EC7B00FB7EB2 /* RestaurantHeaderCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601CD832927EC7B00FB7EB2 /* RestaurantHeaderCollCell.swift */; };
 		7615862629309376006EAFAB /* TermsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7615862529309376006EAFAB /* TermsModel.swift */; };
 		7615862A2930947D006EAFAB /* TermsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761586292930947D006EAFAB /* TermsVM.swift */; };
@@ -276,6 +284,7 @@
 		6C0BF8C9293741E8002D5B75 /* BoatBookTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatBookTimeModel.swift; sourceTree = "<group>"; };
 		6C0BF8CB29376C4C002D5B75 /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
 		6C0BF8CD29379CCE002D5B75 /* BodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyModel.swift; sourceTree = "<group>"; };
+		6C262ABD295DA36C00CF77FB /* ParkingDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDetailsVC.swift; sourceTree = "<group>"; };
 		6C27AA0729430D75003A79F7 /* Device+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Device+Extension.swift"; sourceTree = "<group>"; };
 		6C27AA09294314EC003A79F7 /* AVAsset+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAsset+Extension.swift"; sourceTree = "<group>"; };
 		6C2D422028E41C5100BDA3ED /* AddCaptainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaptainVC.swift; sourceTree = "<group>"; };
@@ -287,6 +296,10 @@
 		6C40C732294CD6490051CEF5 /* ForgotPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassVC.swift; sourceTree = "<group>"; };
 		6C40C735294D729D0051CEF5 /* OTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVC.swift; sourceTree = "<group>"; };
 		6C40C737294D98370051CEF5 /* NewPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPassVC.swift; sourceTree = "<group>"; };
+		6C4D980B2975B71C0006635D /* HesabeCrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HesabeCrypt.swift; sourceTree = "<group>"; };
+		6C4D980C2975B71C0006635D /* HesabeModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HesabeModels.swift; sourceTree = "<group>"; };
+		6C4D980D2975B71D0006635D /* ConstantsPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsPayment.swift; sourceTree = "<group>"; };
+		6C4D980E2975B71D0006635D /* HesabeGatewayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HesabeGatewayVC.swift; sourceTree = "<group>"; };
 		6C575B8A28E0843D0061E2E8 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
 		6C575B8B28E0843D0061E2E8 /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
 		6C575B8E28E089250061E2E8 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
@@ -343,6 +356,9 @@
 		6CE8986A28E37103003E1417 /* ContactUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsVC.swift; sourceTree = "<group>"; };
 		6CE8986D28E37119003E1417 /* ChangePassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassVC.swift; sourceTree = "<group>"; };
 		6CE8986F28E37125003E1417 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		6CFB8CBE2959B3AF00D7ADB8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		6CFB8CC02959B4DA00D7ADB8 /* TSBlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSBlurEffectView.swift; sourceTree = "<group>"; };
+		6CFB8CC6295C665300D7ADB8 /* BoatInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatInfoModel.swift; sourceTree = "<group>"; };
 		7601CD832927EC7B00FB7EB2 /* RestaurantHeaderCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantHeaderCollCell.swift; sourceTree = "<group>"; };
 		76158623292FF572006EAFAB /* BLUE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLUE.entitlements; sourceTree = "<group>"; };
 		7615862529309376006EAFAB /* TermsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsModel.swift; sourceTree = "<group>"; };
@@ -685,6 +701,17 @@
 			path = OTP;
 			sourceTree = "<group>";
 		};
+		6C4D980A2975B7110006635D /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				6C4D980E2975B71D0006635D /* HesabeGatewayVC.swift */,
+				6C4D980D2975B71D0006635D /* ConstantsPayment.swift */,
+				6C4D980B2975B71C0006635D /* HesabeCrypt.swift */,
+				6C4D980C2975B71C0006635D /* HesabeModels.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
 		6C575B8828E084190061E2E8 /* PaymentMethodView */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +760,7 @@
 		6C57CF1728DC27DF0058041D /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				6C4D980A2975B7110006635D /* Payment */,
 				769DAB752926B011004C69DD /* ProductViewModel */,
 				6C57CF1C28DC28290058041D /* StoryBoards */,
 				6C57CF1A28DC27F60058041D /* Controllers */,
@@ -963,6 +991,7 @@
 			isa = PBXGroup;
 			children = (
 				6C0A721028E1747900731B43 /* MyParkingVC.swift */,
+				6C262ABD295DA36C00CF77FB /* ParkingDetailsVC.swift */,
 			);
 			path = Controlllers;
 			sourceTree = "<group>";
@@ -1032,6 +1061,8 @@
 			isa = PBXGroup;
 			children = (
 				A90F786928EDB7F9009BD7EE /* UIView+CornerRadius.swift */,
+				6CFB8CBE2959B3AF00D7ADB8 /* UIView+Extensions.swift */,
+				6CFB8CC02959B4DA00D7ADB8 /* TSBlurEffectView.swift */,
 			);
 			path = UIview;
 			sourceTree = "<group>";
@@ -1158,6 +1189,7 @@
 				6C89E21629334864009A5369 /* AddBoatData.swift */,
 				6C89E218293348D3009A5369 /* AddBoatModel.swift */,
 				6CE3845B2937A567006F22B6 /* MyBoatsBookingModel.swift */,
+				6CFB8CC6295C665300D7ADB8 /* BoatInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1649,6 +1681,7 @@
 				A9D2708D28FBDB240047383A /* URL+SoundEmitting.swift in Sources */,
 				6C66EBD928E32190009BDA64 /* ReviewCell.swift in Sources */,
 				A9F38E9928FBAC2300B6C45B /* FBManager.swift in Sources */,
+				6CFB8CC12959B4DA00D7ADB8 /* TSBlurEffectView.swift in Sources */,
 				6C575B8C28E0843D0061E2E8 /* PaymentCell.swift in Sources */,
 				A916950A28ED749900C93B7E /* UIFontExtensions.swift in Sources */,
 				6C89E21729334864009A5369 /* AddBoatData.swift in Sources */,
@@ -1656,7 +1689,9 @@
 				A9F38EAE28FBBD0400B6C45B /* AppKey.swift in Sources */,
 				A90F786A28EDB7F9009BD7EE /* UIView+CornerRadius.swift in Sources */,
 				769DAB722926AF09004C69DD /* ProductCategoryData.swift in Sources */,
+				6C4D980F2975B71D0006635D /* HesabeCrypt.swift in Sources */,
 				765D3F43292564C90037CF45 /* TimeSlotData.swift in Sources */,
+				6CFB8CBF2959B3AF00D7ADB8 /* UIView+Extensions.swift in Sources */,
 				A9F38EC328FBC0F200B6C45B /* String+Validation.swift in Sources */,
 				A982A60F29001DA600DA8862 /* Packages.swift in Sources */,
 				6C2D422428E4205200BDA3ED /* CommonUtility.swift in Sources */,
@@ -1693,14 +1728,17 @@
 				7673A8562935D0B800F58007 /* MyBoatModel.swift in Sources */,
 				76CF1F6C29280DF000BEB104 /* HomeModel.swift in Sources */,
 				6C0A720D28E1716500731B43 /* ParkingCell.swift in Sources */,
+				6C4D98122975B71D0006635D /* HesabeGatewayVC.swift in Sources */,
 				6C57CF2228DC30ED0058041D /* LoginVC.swift in Sources */,
 				6C2D422A28E428F000BDA3ED /* BottomBarController.swift in Sources */,
+				6C262ABE295DA36C00CF77FB /* ParkingDetailsVC.swift in Sources */,
 				7601CD842927EC7B00FB7EB2 /* RestaurantHeaderCollCell.swift in Sources */,
 				A955E4FF291219AA008DA919 /* ImagePicker.swift in Sources */,
 				A9F38F0328FBC20000B6C45B /* NotificationCenter+Extension.swift in Sources */,
 				769DAB772926B053004C69DD /* ProductVM.swift in Sources */,
 				76CF1F6A29280DA600BEB104 /* SeafarerData.swift in Sources */,
 				6CC3135B292A6E5C00CE66AE /* TimeSlotCell.swift in Sources */,
+				6CFB8CC7295C665300D7ADB8 /* BoatInfoModel.swift in Sources */,
 				A91694F728ED6EDC00C93B7E /* NibOwnerLoadable.swift in Sources */,
 				6CE8986B28E37103003E1417 /* ContactUsVC.swift in Sources */,
 				76EDE6462922CF180023C7D5 /* ProductSubCategory.swift in Sources */,
@@ -1735,6 +1773,7 @@
 				A9F38E9E28FBAC2300B6C45B /* Connectivity.swift in Sources */,
 				6C0A720928E16D8300731B43 /* HomeVC.swift in Sources */,
 				A9D6ACBC28FAF8840058D610 /* MyBookingVC.swift in Sources */,
+				6C4D98112975B71D0006635D /* ConstantsPayment.swift in Sources */,
 				6CE8986E28E37119003E1417 /* ChangePassVC.swift in Sources */,
 				765D3F41292563E10037CF45 /* TimeSlotModel.swift in Sources */,
 				6C0A721E28E17BF400731B43 /* TabCell.swift in Sources */,
@@ -1825,6 +1864,7 @@
 				A9D3494328F85E48000D4461 /* BookingConfirmedVC.swift in Sources */,
 				A999F2AF2903ABA7007DE1E6 /* FacilitiesCell.swift in Sources */,
 				6C89E21529321A76009A5369 /* BookingModel.swift in Sources */,
+				6C4D98102975B71D0006635D /* HesabeModels.swift in Sources */,
 				6C2D422128E41C5100BDA3ED /* AddCaptainVC.swift in Sources */,
 				A916950628ED73CE00C93B7E /* UIColorExtensions.swift in Sources */,
 				A9F38E9A28FBAC2300B6C45B /* SocialUser.swift in Sources */,
@@ -1993,7 +2033,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Blue would like to fetch the current Location to make better experience of app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Blue would like to fetch the current Location to make better experience of app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -2002,7 +2042,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blueapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2034,7 +2074,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Blue would like to fetch the current Location to make better experience of app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Blue would like to fetch the current Location to make better experience of app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -2043,7 +2083,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blueapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

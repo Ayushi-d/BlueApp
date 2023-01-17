@@ -24,6 +24,8 @@ public class SeafarerData {
       static let images = "images"
       static let created_at = "created_at"
       static let age = "age"
+      static let isUnlocked = "unlock"
+      static let amount = "amount"
 
   }
 
@@ -33,13 +35,15 @@ public class SeafarerData {
     public var phone_no: Int?
     public var nationality: String?
     public var category: String?
-    public var language: String?
     public var experince: String?
-    public var baot_experince: String?
+    public var baot_experince: [String]?
     public var license_number: String?
     public var images: [String]?
     public var created_at: String?
     public var age : Int?
+    public var isUnlocked: Bool?
+    public var amount: String?
+    public var language: [String]?
     
 
   // MARK: SwiftyJSON Initializers
@@ -60,13 +64,15 @@ public class SeafarerData {
       phone_no = json[SerializationKeys.phone_no].int
       nationality = json[SerializationKeys.nationality].string
       category = json[SerializationKeys.category].string
-      language = json[SerializationKeys.language].string
+      language = json[SerializationKeys.language].arrayValue.map { $0.stringValue }
       experince = json[SerializationKeys.experince].string
-      baot_experince = json[SerializationKeys.baot_experince].string
+      baot_experince = json[SerializationKeys.baot_experince].arrayValue.map { $0.stringValue }
       license_number = json[SerializationKeys.license_number].string
       if let items = json[SerializationKeys.images].array { images = items.map{ "\($0)"} }
       created_at = json[SerializationKeys.created_at].string
       age = json[SerializationKeys.age].int
+      isUnlocked = json[SerializationKeys.isUnlocked].bool
+      amount = json[SerializationKeys.amount].string
      
   }
 
@@ -87,6 +93,8 @@ public class SeafarerData {
 //      if let value = images { dictionary[SerializationKeys.images] = value }
       if let value = created_at { dictionary[SerializationKeys.created_at] = value }
       if let value = age { dictionary[SerializationKeys.age] = value }
+      if let value = isUnlocked { dictionary[SerializationKeys.isUnlocked] = value }
+      if let value = amount { dictionary[SerializationKeys.amount] = value }
 
 
     return dictionary

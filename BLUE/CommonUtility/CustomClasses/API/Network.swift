@@ -153,11 +153,11 @@ class Network {
                         if showError {
                             AlertMesage.show(.error, message: Localizable.info.tryAfterSometime)
                         }
-                        completion(nil)
+                        completion(json)
                         return
                     }
 
-                    if let aDictError = aResponse[API.Response.data]?.dictionary, let strMessage = aDictError[API.Response.error]?.string {
+                    if let strMessage = aResponse[API.Response.message]?.string {
                         // Display message to the user.
                         if showError {
                             AlertMesage.show(.error, message: strMessage)
@@ -168,7 +168,7 @@ class Network {
                             AlertMesage.show(.error, message: Localizable.info.tryAfterSometime)
                         }
                     }
-                    completion(nil)
+                    completion(json)
                     break
                 case 401:
                     // 🚨 - Error response from the server.

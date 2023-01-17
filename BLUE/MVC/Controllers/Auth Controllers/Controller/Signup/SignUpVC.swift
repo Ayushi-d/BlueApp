@@ -17,6 +17,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var confrmPasswordTextField: UITextField!
     @IBOutlet weak var civilIDTextField: UITextField!
 
+    @IBOutlet weak var signInLabel: UIButton!
     @IBOutlet weak var viewfirstNameTextField: UIView!
     @IBOutlet weak var viewlastnameTextField: UIView!
     @IBOutlet weak var viewphoneNoTextField: UIView!
@@ -32,6 +33,8 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let signInLabel = CommonUtility.addBoldTextToString(0, lineHeight: 5, underline: 0, textColor: .black, fullString: "Already have an account? Sign In", boldPartOfString: "Sign In", boldPartOfString2: "", font: UIFont.systemFont(ofSize: 16), boldFont: UIFont.boldSystemFont(ofSize: 16), boldFontColor: .black)
+        self.signInLabel.setAttributedTitle(signInLabel, for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

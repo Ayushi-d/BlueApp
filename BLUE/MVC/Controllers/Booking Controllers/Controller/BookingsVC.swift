@@ -20,6 +20,8 @@ class BookingsVC: UIViewController {
     var ownerBoatID = Int()
     var bookingDetails: BookingModel?
     var availableData : AvailableParking?
+    var boatInfo : BoatInfoModel?
+    
     var startDate = Date()
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -61,6 +63,7 @@ class BookingsVC: UIViewController {
         if validateData(){
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PaymentVC") as! PaymentVC
             vc.bookingDetails = BookingModel(boatId: ownerBoatID,parkingID: self.availableData?.id ?? 0,parkingAddress: "", boatName: self.availableData?.name ?? "", startTime: self.startingTimeLabel.text!, endTime: self.endingTImeLabel.text!, startDate: self.fromLabel.text!, endDate: self.untilLabel.text!, totalPrice: self.priceField.text!)
+            vc.boatInfo = self.boatInfo
             self.navigationController?.isHeroEnabled = true
             self.navigationController?.heroNavigationAnimationType = .zoom
             self.navigationController?.pushViewController(vc, animated: true)

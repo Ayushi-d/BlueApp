@@ -24,6 +24,8 @@ class LocationVC: UIViewController, StoryboardSceneBased, MKMapViewDelegate {
     var ownerBoatID = Int()
     @IBOutlet weak var mapView: MKMapView!
     var availableParking : AvailableParking?
+    var boatInfo : BoatInfoModel?
+
     @IBOutlet weak var gMapVIew: UIView!
     var isFrom = ""
     @IBOutlet weak var upperView: UIView!
@@ -60,25 +62,6 @@ class LocationVC: UIViewController, StoryboardSceneBased, MKMapViewDelegate {
         return annotaionView
     }
     
-//    func setupMap(){
-//        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-//        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-//        gMapVIew = mapView
-//        let marker = GMSMarker()
-//        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-//        marker.title = availableParking?.name ?? ""
-//        //marker.snippet = "Australia"
-//        marker.map = mapView
-//    }
-    
-//    func setupMac(){
-//        let lattitude = Double(availableParking?.lat ?? "0.0")
-//        let longitude = Double(availableParking?.long ?? "0.0")
-//        let center = CLLocationCoordinate2D(latitude: 30.715260, longitude: 76.707771)
-//        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 76.707771, longitudeDelta: 76.707771))
-//        self.mapView.setRegion(region, animated: true)
-//    }
-    
     @IBAction func backTapped(_ sender: Any) {
         self.poptoViewController()
     }
@@ -87,6 +70,7 @@ class LocationVC: UIViewController, StoryboardSceneBased, MKMapViewDelegate {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookingsVC") as! BookingsVC
         vc.availableData = availableParking
         vc.ownerBoatID = ownerBoatID
+        vc.boatInfo = self.boatInfo
         self.navigationController?.isHeroEnabled = true
         self.navigationController?.heroNavigationAnimationType = .zoom
         self.navigationController?.pushViewController(vc, animated: true)

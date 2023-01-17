@@ -44,6 +44,8 @@ class RestaurantPaymentVC: UIViewController, StoryboardSceneBased {
     var couponData: CouponModel?
     var start = ""
     var end = ""
+    var isCouponApplied = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureOnViewDidLoad()
@@ -98,15 +100,36 @@ class RestaurantPaymentVC: UIViewController, StoryboardSceneBased {
     
     // MARK: IB Actions
     @IBAction func btnPayConfimrTapped(_ sender: Any) {
-        self.boatBookingAPI()
+        //self.boatBookingAPI()
+        var paymentRequest = PaymentRequest(amount: "1")
+        paymentRequest?.orderReferenceNumber = "12XXXXXX" // optional
+        self.presentHesabeGateway(paymentRequest: paymentRequest!)
+    }
+    
+    func presentHesabeGateway(paymentRequest: PaymentRequest) {
+        let vc = HesabeGatewayVC()
+        vc.paymentRequest = paymentRequest
+        vc.modalPresentationStyle = .overFullScreen // to avoid dafault popover presentation
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func hesabeResponse(paymentResponse: PaymentResponse) {
+        let data = paymentResponse.response
+        //print("pppp---",data.resultCode)
+        //statusLabel.text = data.resultCode + " - #" + data.orderReferenceNumber!
     }
     
     @IBAction func applyTapped(_ sender: Any) {
-        if couponField.text == ""{
+        if couponField.text == ""   {
             self.couponField.shake()
             AlertMesage.show(.error, message: "Please Enter Coupon")
         }else{
-            self.couponAPI()
+            if !isCouponApplied{
+                self.couponAPI()
+            }else{
+                AlertMesage.show(.error, message: "Coupon Already Applied")
+            }
         }
     }
     
@@ -116,6 +139,7 @@ class RestaurantPaymentVC: UIViewController, StoryboardSceneBased {
             if isSuccess{
                 DispatchQueue.main.async {
                     AlertMesage.show(.success, message: "Coupon Code Applied")
+                    self.isCouponApplied = true
                     self.couponData = result?.data
                     self.totalAmountLabel.text = "\(self.grandTotal - (Double(result?.data?.discount_amount ?? "0.0")?.rounded() ?? 0.0))"
                 }

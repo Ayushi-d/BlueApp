@@ -2,7 +2,6 @@
 //  ChangePassVC.swift
 //  BLUE
 //
-//  Created by Agyapal Dhiman on 27/09/22.
 //
 
 import UIKit
@@ -15,6 +14,9 @@ class ChangePassVC: UIViewController, StoryboardSceneBased {
     @IBOutlet weak var newPassField: UITextField!
     @IBOutlet weak var confrmPassField: UITextField!
 
+    @IBOutlet weak var currentEyeIcon: UIButton!
+    @IBOutlet weak var newEyeIcon: UIButton!
+    @IBOutlet weak var cnfrmEyeIcon: UIButton!
     // MARK: Variable
     private lazy var authVM: AuthVM = {
         return AuthVM()
@@ -33,6 +35,31 @@ class ChangePassVC: UIViewController, StoryboardSceneBased {
             authVM.callWSChangePassword { // Change Password API
                 self.poptoViewController()
             }
+        }
+    }
+    
+    @IBAction func currentEyeTapped(_ sender: UIButton) {
+        if currentPassField.isSecureTextEntry {
+            currentPassField.isSecureTextEntry = false
+        } else {
+            currentPassField.isSecureTextEntry = true
+        }
+    }
+    
+    
+    @IBAction func newEyeTapped(_ sender: UIButton) {
+        if newPassField.isSecureTextEntry {
+            newPassField.isSecureTextEntry = false
+        } else {
+            newPassField.isSecureTextEntry = true
+        }
+    }
+    
+    @IBAction func cnfrmEyetapped(_ sender: UIButton) {
+        if confrmPassField.isSecureTextEntry {
+            confrmPassField.isSecureTextEntry = false
+        } else {
+            confrmPassField.isSecureTextEntry = true
         }
     }
     

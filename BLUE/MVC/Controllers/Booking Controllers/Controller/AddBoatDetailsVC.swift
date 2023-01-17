@@ -26,7 +26,8 @@ class AddBoatDetailsVC: UIViewController, StoryboardSceneBased {
     var arrImage = [String]()
     var img1: String?
     var img2: String?
-        
+    var boatInfo: BoatInfoModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,13 +78,16 @@ class AddBoatDetailsVC: UIViewController, StoryboardSceneBased {
     
     @IBAction func procced_tapped(_ sender: Any) {
         if validateData() {
-            addBoatViewModel.callWSAddBoat { sucess, boatID in
-                if sucess {
-                    let vc =  AllBoatsVC.instantiate()
-                    vc.ownerBoatID = boatID ?? 0
-                    self.pushVC(controller: vc)
-                }
-            }
+//            addBoatViewModel.callWSAddBoat { sucess, boatID in
+//                if sucess {
+//                    let vc =  AllBoatsVC.instantiate()
+//                    vc.ownerBoatID = boatID ?? 0
+//                    self.pushVC(controller: vc)
+//                }
+//            }
+            let vc =  AllBoatsVC.instantiate()
+            vc.boatInfo = self.boatInfo
+            self.pushVC(controller: vc)
         }
     }
     
@@ -140,6 +144,7 @@ extension AddBoatDetailsVC {
         arrImage.append(img1 ?? "sgsd")
         arrImage.append(img2 ?? "sgsety")
         addBoatViewModel.saveAddData(name: boatNameField.text ?? "", height: boatHeightField.text ?? "", width: (boatWidthField.text ?? ""), boat_type: (boatTypeField.text ?? ""), image: arrImage)
+        boatInfo = BoatInfoModel(name: boatNameField.text ?? "", boatType: (boatTypeField.text ?? ""), boatWidth: (boatWidthField.text ?? ""), boatHeight: boatHeightField.text ?? "", boatImages: arrImage)
         // ✅(boatWidthField.text ?? "")
         return true
     }

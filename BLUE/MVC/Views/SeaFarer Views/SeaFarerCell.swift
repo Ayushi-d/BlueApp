@@ -15,6 +15,8 @@ protocol SeaFarerPhoneProtocol{
 
 class SeaFarerCell: UITableViewCell {
 
+    @IBOutlet weak var blurParentView: UIView!
+    @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var seaFarerName: UILabel!
     @IBOutlet weak var seaFarerExperince: UILabel!
     @IBOutlet weak var seaFarerNationality: UILabel!
@@ -39,10 +41,19 @@ class SeaFarerCell: UITableViewCell {
     }
     
     func cellConfig(with object: SeafarerData ) {
-        seaFarerlanguages.text = "Spoken languages: \(object.language ?? "")"
+        if !(object.isUnlocked ?? false){
+            self.blurView.removeBlurEffect()
+            self.blurView.backgroundColor = .clear
+            self.blurView.blurView(with: 1.8)
+            self.blurParentView.isHidden = false
+        }else{
+            self.blurView.removeBlurEffect()
+            self.blurParentView.isHidden = true
+        }
+        seaFarerlanguages.text = "Spoken languages: \(object.language?.joined(separator: ",") ?? "")"
         seaFarerName.text = object.name
         seaFarerNationality.text = "Nationality: \(object.nationality ?? "")"
-        seaFarerBoatExperince.text = "Boat experience: \(object.baot_experince ?? "")"
+        seaFarerBoatExperince.text = "Boat experience: \(object.baot_experince?.joined(separator: ",") ?? "")"
         seaFarerExperince.text = "Experience: \(object.experince ?? "")"
         seaFarerAge.text = "\(object.age ?? 35) years"
     }
@@ -55,5 +66,6 @@ class SeaFarerCell: UITableViewCell {
     @IBAction func seaFarerMsgTapped(_ sender: UIButton) {
         self.delegate?.didtappedMessage(tag: sender.tag)
     }
+    
     
 }

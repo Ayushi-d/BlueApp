@@ -8,6 +8,7 @@ PODS:
   - AppAuth/ExternalUserAgent (1.4.0)
   - Cache (6.0.0)
   - Cosmos (23.0.0)
+  - CryptoSwift (1.6.0)
   - FBAEMKit (11.2.1):
     - FBAEMKit/AEM (= 11.2.1)
   - FBAEMKit/AEM (11.2.1):
@@ -163,6 +164,7 @@ PODS:
 DEPENDENCIES:
   - AGSwipeableTabBar
   - Cosmos (= 23.0.0)
+  - CryptoSwift (~> 1.6.0)
   - FBSDKCoreKit
   - FBSDKLoginKit (= 11.2.0)
   - FBSDKShareKit
@@ -187,6 +189,7 @@ SPEC REPOS:
     - AppAuth
     - Cache
     - Cosmos
+    - CryptoSwift
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -224,6 +227,7 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  CryptoSwift: 562f8eceb40e80796fffc668b0cad9313284cfa6
   FBAEMKit: 5de0a7aaa854eec69bb5be20795952a63d38a5f6
   FBSDKCoreKit: bf655f808b040ed66a72b9922911b39d703e64f4
   FBSDKCoreKit_Basics: 73ebe3a27eb688ac5b5aa7e99f68992993042115
@@ -255,6 +259,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: a6a8adb0b4a6870b609b72a8f86fff34a1368d9f
+PODFILE CHECKSUM: 24d93e28fe19881226232c4634a6e2861688e4df
 
 COCOAPODS: 1.11.2

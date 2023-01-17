@@ -18,6 +18,9 @@ class PaymentVC: UIViewController {
     var endTime = ""
     var grandTotal = 0.0
     var couponData: CouponModel?
+    var isCouponApplied = false
+    var boatInfo: BoatInfoModel?
+    
     @IBOutlet weak var parkingAddress: UILabel!
     @IBOutlet weak var boatsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -70,7 +73,11 @@ class PaymentVC: UIViewController {
             self.couponField.shake()
             AlertMesage.show(.error, message: "Please Enter Coupon")
         }else{
-            self.couponAPI()
+            if !isCouponApplied{
+                self.couponAPI()
+            }else{
+                AlertMesage.show(.error, message: "Coupon Already Applied")
+            }
         }
     }
     
@@ -88,6 +95,7 @@ class PaymentVC: UIViewController {
             if isSuccess{
                 DispatchQueue.main.async {
                     AlertMesage.show(.success, message: "Coupon Code Applied")
+                    self.isCouponApplied = true
                     self.couponData = result?.data
                     self.totalPriceLabel.text = "\(self.grandTotal - (Double(result?.data?.discount_amount ?? "0.0")?.rounded() ?? 0.0))"
                 }
@@ -103,7 +111,7 @@ class PaymentVC: UIViewController {
         
         let fromDate = "\(self.bookingDetails!.startDate.shortDate())" + " " + "\(self.startTime.trim()+":00")"
         let toDate = "\(self.bookingDetails!.endDate.shortDate())" + " " + "\(self.endTime.trim()+":00")"
-        let rquestBody :[String: Any] = ["owner_boat_id":"\(self.bookingDetails?.boatId ?? 0)","parking_id":"\(bookingDetails!.parkingID)","from_date":fromDate,"to_date":toDate,"price": self.totalPriceLabel.text!, "grand_total":self.totalPriceLabel.text!, "coupon_id":"\(couponData?.coupon_id ?? 0)","payment_method":"card","payment_status":"success","transaction_id":"123456"]
+        let rquestBody :[String: Any] = ["parking_id":"\(bookingDetails!.parkingID)","from_date":fromDate,"to_date":toDate,"price": self.totalPriceLabel.text!, "grand_total":self.totalPriceLabel.text!, "coupon_id":"\(couponData?.coupon_id ?? 0)","payment_method":"card","payment_status":"success","transaction_id":"123456","name":boatInfo?.name ?? "","height":boatInfo?.boatHeight ?? "","width":boatInfo?.boatWidth ?? "","boat_type":boatInfo?.boatType ?? "","image":boatInfo?.boatImages ?? []]
         
         urlProvider.hitAPI(requestUrl: URL(string: "https://blue.testingjunction.tech/api/parking-booking")!, httpMethod: .post, requestBody: rquestBody.percentEncoded()) { result, statusCode, isSuccess, error in
             if isSuccess{

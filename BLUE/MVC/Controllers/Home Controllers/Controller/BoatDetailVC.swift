@@ -8,13 +8,15 @@ import UIKit
 import Lightbox
 import AVFoundation
 import Cosmos
+import MapKit
 
-class BoatDetailVC: UIViewController, StoryboardSceneBased, LightboxControllerDismissalDelegate {
+class BoatDetailVC: UIViewController, StoryboardSceneBased, LightboxControllerDismissalDelegate , MKMapViewDelegate{
     
     /// Storyboard  variable
     static let sceneStoryboard = UIStoryboard(name: StoryboardName.home.rawValue, bundle: nil)
 
-    @IBOutlet weak var backTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var noFacilitiesView: UIView!
+    @IBOutlet weak var parkingMapView: MKMapView!
     @IBOutlet weak var boatImage: UIImageView!
     @IBOutlet weak var boatName: UILabel!
     @IBOutlet weak var boatPrice: UILabel!
@@ -45,15 +47,33 @@ class BoatDetailVC: UIViewController, StoryboardSceneBased, LightboxControllerDi
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if UIDevice.current.hasNotch{
-            self.backTopConstraint.constant = 50
+    }
+    
+    func addCustomPin(coordinate: CLLocationCoordinate2D){
+        let pin = MKPointAnnotation()
+        pin.coordinate = coordinate
+        parkingMapView.addAnnotation(pin)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else{
+            return nil
         }
+        var annotaionView = mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+        if annotaionView == nil{
+            annotaionView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+        }else{
+            annotaionView?.annotation = annotation
+        }
+        annotaionView?.image = UIImage.init(named: "ic_marker")
+        return annotaionView
     }
     
     // MARK: Private Methods
     private func configureOnViewDidLoad() {
-        getBoeatDetailsAPI()
+        parkingMapView.delegate = self
         
+        getBoeatDetailsAPI()
         if isFrom == ""{
             bookNow.isHidden = false
         }else{
@@ -101,6 +121,7 @@ class BoatDetailVC: UIViewController, StoryboardSceneBased, LightboxControllerDi
                 boatDescription.text = objBoatDetailsData?.descriptionValue ?? ""
                 boatImage.setImage(withURL: objBoatDetailsData?.featuredImage ?? "", toShowIndicator: true,placeholderImage: PlaceHolderImages.homelaceHolder)
                 //boatImage.setImageUsingKF(string: objBoatDetailsData?.featuredImage ?? "", placeholder: PlaceHolderImages.homelaceHolder, isFited: false)
+                self.facilitiesCollectionView.isHidden = objBoatDetailsData?.facilities?.count != 0 ? false : true
                 if let objFacilities = objBoatDetailsData?.facilities {
                     arrfacilities = objFacilities
                 }
@@ -110,6 +131,11 @@ class BoatDetailVC: UIViewController, StoryboardSceneBased, LightboxControllerDi
                 if let objpackages = objBoatDetailsData?.packages {
                     arrPackage = objpackages
                 }
+                let lat = Double(objBoatDetailsData?.lat ?? "0.0")
+                let long = Double(objBoatDetailsData?.long ?? "0.0")
+                let coordinate = CLLocationCoordinate2D(latitude: lat ?? 0.0, longitude: long ?? 0.0)
+                parkingMapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)), animated: true)
+                addCustomPin(coordinate: coordinate)
             }
         }
         boatImagesCollectionView.reloadData()
@@ -169,6 +195,7 @@ extension BoatDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         }
         
     }
+    
     func showFullImage(tempImage: String, isVideo : Bool)  {
         guard let aImageURL = URL(string: (UDManager.baseURLPath ?? "") + (tempImage)) else { return }
 

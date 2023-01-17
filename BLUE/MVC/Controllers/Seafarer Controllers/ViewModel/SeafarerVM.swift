@@ -33,9 +33,11 @@ class SeafarerVM: NSObject {
 
     
     public var page: Int?
+    public var seaFarerCategory: String?
 
-    public func saveSeafarerData(page: Int) {
+    public func saveSeafarerData(page: Int, seaFarerCategory: String) {
         self.page = page
+        self.seaFarerCategory = seaFarerCategory
     }
     
     public func addSeafarerData(name: String,
@@ -71,6 +73,7 @@ class SeafarerVM: NSObject {
         
         var param: [String: Any] = [:]
         param[API.Key.page] = page
+        param[API.Key.category] = seaFarerCategory
         
         Network.request(Service.getSeafarerList(param: param), isShowLoader: isShowLoader) { (jsonResponse) in
             self.isAPICalling = false
@@ -86,7 +89,6 @@ class SeafarerVM: NSObject {
                 completion(false)
             }
         }
-
     }
     
     public func getSeafararCategory(_ isShowLoader: Bool = true, completion: @escaping (Bool) -> Void) {
